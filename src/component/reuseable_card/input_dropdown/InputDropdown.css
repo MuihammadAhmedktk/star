@@ -1,0 +1,105 @@
+.input-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.dropdown{
+    position: relative;
+    width: 100%;
+}
+.dropdown input{
+    width: 100%;
+    padding: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    outline: none;
+    background-color: #48494a;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.dropdown input::placeholder{
+    color: #fff;
+}
+.dropdown-icon{
+    position: absolute;
+    font-size: 2.2rem;
+    text-align: center;
+    right: 12px;
+    top: 67%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropdown-icon.open{
+    transform: translateY(-50%) rotate(180deg);
+    text-align: center;
+    top: 44%;
+    height: 36px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    background-color: #1D1E1F;
+    padding: 10px;
+    display: grid;
+    height: 50vh;
+    grid-template-columns: repeat(4, 1fr); /* 5 columns */
+    transition: opacity 2s ease-in-out;
+    gap: 10px;
+    z-index: 1000;
+    overflow-y: scroll;
+  }
+  /* Custom scrollbar styles */
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .dropdown-option {
+    padding: 10px;
+    border-radius: 5px;
+    color: #b5b7b7;
+    cursor: pointer;
+    text-align: start;
+  }
+  
+  .dropdown-option:hover {
+    color: #fff;
+  }
+  @media (min-width: 425px) and (max-width: 768px) {
+    .dropdown-menu{
+      grid-template-rows: 10%;
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+  @media (min-width:320px ) and (max-width: 375px){
+    .dropdown-menu{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+  @media (max-width:320px ) {
+    .dropdown-menu{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }

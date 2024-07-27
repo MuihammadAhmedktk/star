@@ -1,0 +1,76 @@
+.Movie_card-all {
+    padding-bottom: 20px;
+   
+}
+.Movie_card {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 12px;
+    background-color: #1D1E1F;
+}
+.Movie_card_img {
+   border-top-right-radius: 12px;
+   border-top-left-radius: 12px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.Movie_card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.guide-esp {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: .5rem;
+  top: 10rem;
+  font-size: .8rem;
+  background-color: #030D29;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 4rem;
+  height: 4vh;
+}
+
+.Movie_card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: .5rem;
+    padding-left: 1rem;
+}
+.Movie_card_text hr {
+    margin-top: 0.6rem;
+    width: 3rem;
+}
+.Movie_card_text p {
+    margin-top: .6rem;
+    color: white;
+}
+.para{
+    padding-bottom: 1rem;
+}
+
+
+@media (max-width:430px){
+  .Movie_card-all{
+    padding-left:0.5rem ;
+    padding-right: 0.5rem;
+  }
+  .slick-prev{
+    left: -9px;
+    top:8rem;
+  }
+  .slick-next{
+    top:8rem;
+    right: -10px;
+  }
+  .custom-arrow::before{
+    font-size: 50px;
+  }
+}

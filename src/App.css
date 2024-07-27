@@ -1,0 +1,367 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins';
+}
+.heading-h2{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.three-card-bg-color{
+  background-color: #4D0608;
+}
+.line-adjust hr{
+  width: 97%; 
+ margin-left: 1rem;
+ margin-bottom: 1rem;
+}
+.pad-r-l-all{
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+.pad-r-l-all-card{
+  padding-right: 5.7rem;
+  padding-left: 5.7rem;
+}
+/* button */
+button {
+  display: block;
+  height: 7vh;
+  text-align: center;
+  width: 9rem;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fade4b;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #48494a;
+}
+.btn-bg-color{
+  height: 7vh;
+  width: 13rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #FADE4B;
+  margin-left: .6rem;
+}
+/* button bg black*/
+.btn-bg-black-color{
+  
+  width: 13rem;
+  height: 7vh;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #000000;
+  border: 1px solid #FADE4B;
+  color: #fff;
+  margin-left: 1rem;
+}
+.btn-bg-black-color:hover{
+  border:1px solid #fff;
+  background-color: #000000;
+  color: #fff;
+  outline: none;
+}
+/* Movie Button */
+.movie_btn {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+
+.movie_btn button{
+  text-align: center;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+.movie_btn button:first-child {
+  position: relative; 
+  background-color: #FADE4B;
+  color: #000;
+
+  border: none;
+  cursor: pointer;
+  overflow: hidden; 
+  z-index: 1; 
+  transition: color 0.7s ease; 
+}
+.movie_btn button:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);  
+  transition: left 0.7s ease; 
+  z-index: -1;
+}
+.movie_btn button:first-child:hover::before {
+  left: 0; 
+}
+.movie_btn button:last-child{
+  border:2px solid #FADE4B;
+
+
+  background-color: #000000;
+  cursor: pointer;
+}
+.movie_btn button:last-child:hover{
+  border:2px solid #cfcfcd;
+  transition: 0.5s all ease-in-out;
+}
+/* View all Arrow */
+.arrow-adjust{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.arrow-adjust div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-arrow-span{
+  padding-top:9px ;
+}
+.view-arrow{
+ font-size: 2rem;
+ font-weight: 200;
+}
+/* small line in card upper from text */
+.text_line hr{
+  margin-top: 0.6rem;
+  width: 3rem;
+}
+
+.bg-all-color{
+  background-color: #000000;
+}
+.icons-color{
+  color: #fff;
+}
+.color-white{
+  color: #fff;
+}
+.background-icon{
+  background-color: #000000;
+}
+.bg-color{
+  background-color: transparent;
+}
+.icon-size{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.text-size{
+  font-size: 1.2rem ;
+  padding-left: .5rem;
+}
+li{
+  list-style: none;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+  
+}
+.news_header{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  align-items: center;
+}
+/* loader container */
+.loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* arrow of silde right left can edit expcted hero slide */
+.slick-slide {
+  display: flex;
+  padding: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.custom-arrow {
+  width: 50px; 
+  height: 50px; 
+  background: transparent; 
+  color: black; 
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-arrow::before {
+  font-size: 60px; 
+  color: rgb(255, 255, 255); 
+}
+
+.slick-prev {
+  left: -17px; 
+}
+
+.slick-next {
+  top:35%;
+  right: -9px; 
+}
+
+@media  (max-width:768px) {
+  .line-adjust hr{
+    width: 76%; 
+   margin-left: 5.3rem;
+  }
+}
+@media (min-width:425px) and (max-width:768px) {
+  .movie_btn button:first-child{
+    height: 7vh;
+    padding: 0px;
+    margin: 12px auto;
+  }
+  .movie_btn button:last-child{
+    margin: 12px auto;
+    height: 7vh;
+    padding: 0;
+  } 
+  .slick-prev{
+    left: -9px;
+    top:8rem;
+  }
+  .slick-next{
+    top:8rem;
+    right: -10px;
+  }
+  .custom-arrow::before{
+    font-size: 50px;
+  }
+  .news_header{
+    padding-left: .5rem;
+    padding-right:.5rem ;
+    font-size: .5rem;
+  }
+  .line-adjust hr{
+    width: 97%;
+    margin-left: 0.3rem;
+  }
+  .arrow-adjust{
+    font-size: .8rem;
+  }
+  .view-arrow-span{
+    padding-top: 3px;
+  }
+  .view-arrow{
+    font-size: 1.4rem;
+  }
+ 
+ 
+}
+@media (min-width:375px) and (max-width:425px){
+  .movie_btn{
+    flex-direction: column;
+    gap: 0px;
+  }
+    .movie_btn button:first-child{
+      margin: 12px auto;
+    }
+    .movie_btn button:last-child{
+    margin: 12px auto;
+  }
+  .slick-prev{
+    left: -9px;
+    top:8rem;
+  }
+  .slick-next{
+    top:8rem;
+    right: -2px;
+  }
+  .custom-arrow::before{
+    font-size: 50px;
+  }
+  .news_header{
+    padding-left: .5rem;
+    padding-right:.5rem ;
+    font-size: .5rem;
+  }
+  .line-adjust hr{
+    width: 97%;
+    margin-left: 0.3rem;
+  }
+  .arrow-adjust{
+    font-size: .8rem;
+  }
+  .view-arrow-span{
+    padding-top: 3px;
+  }
+  .view-arrow{
+    font-size: 1.4rem;
+  }
+ 
+}
+@media (min-width:320px) and (max-width:375px) {
+  .movie_btn button:last-child{
+    margin: 12px auto;
+  }
+    .movie_btn{
+      flex-direction: column;
+      gap: 0px;
+    }
+    .slick-prev{
+      left: -9px;
+      top:8rem;
+    }
+    .slick-next{
+      top:8rem;
+      right: -10px;
+    }
+    .custom-arrow::before{
+      font-size: 50px;
+    }
+    .news_header{
+      padding-left: .5rem;
+      padding-right:.5rem ;
+      font-size: .5rem;
+    }
+    .line-adjust hr{
+      width: 93%;
+      margin-left: 0.3rem;
+    }
+    .arrow-adjust{
+      font-size: .8rem;
+    }
+    .view-arrow-span{
+      padding-top: 3px;
+    }
+    .view-arrow{
+      font-size: 1.4rem;
+    }
+   
+}
+@media (max-width:360px)and (min-width:320px){
+  .movie_btn button:first-child{
+    margin: 12px auto;
+  }
+  .movie_btn button:last-child{
+  margin: 12px auto;
+}
+}

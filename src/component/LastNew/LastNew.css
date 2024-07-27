@@ -1,0 +1,110 @@
+.LastNew_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #1D1E1F;
+    flex: 1;
+    position: relative;
+}
+.LastNew_card_img{
+    border-top-right-radius: 12px;
+   border-top-left-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+   height: 242px;
+}
+.LastNew_card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.playbutton{
+  position: absolute;
+  top:4rem;
+  left: 9.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background-color: #2E1C0E;
+  border-radius: 50%;
+  width: 12%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-icon{
+  text-align: center;
+}
+.LastNew_card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: .5rem;
+    padding-left: 1rem;
+}
+.LastNew_card_text p{
+    padding-top: .3rem;
+    
+}
+.time{
+  position: absolute;
+  top:13rem;
+}
+/* General Modal Styling */
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow-y: auto; /* Allow background scrolling */
+}
+
+.ReactModal__Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background:transparent;
+  overflow: auto; /* Allow modal content scrolling */
+  outline: none;
+  padding: 20px;
+  max-height: 90vh; /* Adjust based on your needs */
+  width: 80%;
+  max-width: 900px; /* Adjust based on your needs */
+ 
+}
+
+/* Custom close button styling */
+.close-button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Ensure video iframe or video tag is responsive */
+.video-container {
+  width: 100%;
+  height: auto;
+}
+
+.video-container iframe, .video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
