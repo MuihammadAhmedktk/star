@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
-import "../Browsethevideo/BrowserVideo.css";
+import { useSelector } from 'react-redux';
 import BrowseFlimSideMenu from './BrowseFlimSideMenu';
 import BrowseFlimVideo from './BrowseFlimVideo';
+import "../Browsethevideo/BrowserVideo.css";
+import { ClipLoader } from 'react-spinners';
 
-const BrowseFlim = ({ menuOptions, videoData }) => {
-    const [selectedMenu, setSelectedMenu] = useState(menuOptions[0].text);
+const BrowseFlim = () => {
+  const { menuOptions, videoData, loading } = useSelector((state) => state.videos);
+  const [selectedMenu, setSelectedMenu] = useState(menuOptions[0]?.text || '');
 
-    return (
-        <div className='Browserflims'>
-            <BrowseFlimSideMenu menuOptions={menuOptions} setSelectedMenu={setSelectedMenu} />
-            <BrowseFlimVideo videos={videoData[selectedMenu] || []} />
+  return (
+    <div className='Browserflims'>
+      <BrowseFlimSideMenu menuOptions={menuOptions} setSelectedMenu={setSelectedMenu} />
+      {loading ? (
+        <div className="loader-container">
+          <ClipLoader color="#FFFFFF" size={50} />
         </div>
-    );
+      ) : (
+        <BrowseFlimVideo videos={videoData[selectedMenu] || []} loading={loading} />
+      )}
+    </div>
+  );
 };
 
 export default BrowseFlim;
+
+

@@ -3,10 +3,10 @@ import { RiArrowDownSLine } from "react-icons/ri";
 
 const BrowseFlimSideMenu = ({ menuOptions, setSelectedMenu }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(menuOptions[0].text);
+    const [selectedOption, setSelectedOption] = useState(menuOptions[0]?.text || 'ALL');
 
     const handleToggle = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(prev => !prev);
     };
 
     const handleOptionClick = (option) => {
@@ -18,9 +18,14 @@ const BrowseFlimSideMenu = ({ menuOptions, setSelectedMenu }) => {
     return (
         <div className='menu-list-all menu-item-adjust'>
             <div className='for-large-screen for-large-screen-flims'>
-                {menuOptions.map(({ id, text, link, count }) => (
+                {menuOptions.map(({ id, text, count }) => (
                     <div className='menu-list' key={id}>
-                        <span onClick={() => handleOptionClick({ text, link, count })} className='color-white'>{text} ({count})</span>
+                        <span
+                            onClick={() => handleOptionClick({ text, count })}
+                            className='color-white'
+                        >
+                            {text} ({count})
+                        </span>
                     </div>
                 ))}
             </div>
@@ -34,11 +39,13 @@ const BrowseFlimSideMenu = ({ menuOptions, setSelectedMenu }) => {
                         placeholder='ALL'
                         className="dropdown-input"
                     />
-                    <div className={`dropdown-icon ${isOpen ? 'open' : ''}`}><RiArrowDownSLine /></div>
+                    <div className={`dropdown-icon ${isOpen ? 'open' : ''}`}>
+                        <RiArrowDownSLine />
+                    </div>
                 </div>
                 {isOpen && (
                     <div className="dropdown-menu">
-                        {menuOptions.map((option) => (
+                        {menuOptions.map(option => (
                             <div key={option.id} className="dropdown-option">
                                 <span onClick={() => handleOptionClick(option)}>
                                     {option.text} ({option.count})
@@ -53,4 +60,5 @@ const BrowseFlimSideMenu = ({ menuOptions, setSelectedMenu }) => {
 };
 
 export default BrowseFlimSideMenu;
+
 

@@ -1,8 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import lastNewsReducer from './component/LastNew/lastNewsSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import videoReducer from './Redux/Slice/videoSlice';
+import lastNewsReducer from './Redux/Slice/lastNewSlice';
 
-export const store = configureStore({
-    reducer:{
-        lastNews: lastNewsReducer,
-    }
-})
+const store = configureStore({
+  reducer: {
+    videos: videoReducer,
+    lastNew: lastNewsReducer,
+  },
+});
+
+export default store;

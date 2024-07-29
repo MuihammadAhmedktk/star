@@ -68,6 +68,14 @@ import fourcardImg1 from "../assests/fourcard/this-week-in-star-wars-card-1200x6
 import fourcardImg2 from "../assests/fourcard/thrs-singlehero-landing-mobile_df19c13e_4b58028c.jpeg";
 import fourcardImg3 from "../assests/fourcard/sws-thumb-11_7cdb7524.jpeg";
 import fourcardImg4 from "../assests/fourcard/book-club-exlink_01e569ab.jpeg";
+
+// Imagemapping
+import mappingimg2 from "../assests/Browseflim/Star-Wars-Attack-Clones-II-Poster_53baa2e7.jpeg";
+import mappingimg5 from "../assests/Browseflim/Star-Wars-Empire-Strikes-Back-V-Poster_878f7fce.jpeg";
+import mappingimg1 from "../assests/Browseflim/Star-Wars-Phantom-Menace-I-Poster_3c1ff9eb.jpeg";
+import mappingimg3 from "../assests/Browseflim/Star-Wars-Revenge-Sith-III-Poster_646108ce.jpeg";
+import mappingimg4 from '../assests/Browseflim/Star-Wars-New-Hope-IV-Poster_c217085b.jpeg';
+import mappingimg6 from "../assests/Browseflim/Star-Wars-Return-Jedi-VI-Poster_a10501d2.jpeg";
 // lastNewsDetail
 export const getImages = () => {
   return [
@@ -535,5 +543,15 @@ export const Fourcards = () => [
       text: "You'll Dig This DIY Basil Planter"
     }
   ];
+  // Imagemapping
+ export  const Imagemapping = {
+    1: mappingimg1,
+    2: mappingimg2,
+    3: mappingimg3,
+    4: mappingimg4,
+    5: mappingimg5,
+    6: mappingimg6,
+  };
+  
 
 

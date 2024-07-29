@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchLastNewsDetail } from '../component/LastNew/lastNewsSlice';
+import { fetchLastNewsDetail } from '../Redux/Slice/lastNewSlice';
 import Sliders from '../component/Slider/Slider'
 import Movie from '../component/Movie_Blog/Movie'
 import Card from '../component/Card/Card'
@@ -10,16 +10,14 @@ import LastNew from '../component/LastNew/LastNew'
 import ExploreMore from '../component/ExploreMore/ExploreMore'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import StarMovie from '../component/Star-Movies/StarMovie'
-
 import { Link } from 'react-router-dom'
 import { Movie_Comp } from '../Api/Data';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const lastNewsDetail = useSelector((state) => state.lastNews.data);
-  const lastNewsStatus = useSelector((state) => state.lastNews.status);
-  const error = useSelector((state) => state.lastNews.error);
-
+  const lastNewsDetail = useSelector((state) => state.lastNew.data);
+  const lastNewsStatus = useSelector((state) => state.lastNew.status);
+  const error = useSelector((state) => state.lastNew.error);
   useEffect(() => {
     if (lastNewsStatus === 'idle') {
       dispatch(fetchLastNewsDetail());
