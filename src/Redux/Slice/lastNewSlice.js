@@ -32,7 +32,10 @@ const lastNewsSlice = createSlice({
       })
       .addCase(fetchLastNewsDetail.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.data = action.payload;
+        state.data = action.payload.map(item => ({
+          ...item,
+          videoSrc: item.videoSrc || { url: Videos(), sources: [] } // Default value if missing
+        }));
       })
       .addCase(fetchLastNewsDetail.rejected, (state, action) => {
         state.status = 'failed';

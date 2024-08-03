@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from 'react-modal';
 import { CiPlay1 } from "react-icons/ci";
+import { MdClose } from "react-icons/md";
+import { fetchLastNewsDetail } from '../../Redux/Slice/lastNewSlice';
+import { Videos } from '../../Api/Data';
 import "./LastNew.css";
+
 Modal.setAppElement('#root');
-function SampleNextArrow(props) {
+
+const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -15,9 +21,9 @@ function SampleNextArrow(props) {
       onClick={onClick}
     />
   );
-}
+};
 
-function SamplePrevArrow(props) {
+const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -26,42 +32,60 @@ function SamplePrevArrow(props) {
       onClick={onClick}
     />
   );
-}
+};
 
-const LastNew = ({LastNewsDetail}) => {
+const LastNew = () => {
+  const dispatch = useDispatch();
+  const { data: LastNewsDetail, status } = useSelector((state) => state.lastNew);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [isVideo, setIsVideo] = useState(false);
+  const [videoSources, setVideoSources] = useState([]);
+  const [currentSource, setCurrentSource] = useState(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const videoRef = useRef(null);
 
-  const openModal = (videoSrc, isVideo) => {
-    setSelectedVideo(videoSrc);
-    setIsVideo(isVideo);
-    setModalIsOpen(true);
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchLastNewsDetail());
+    }
+  }, [status, dispatch]);
+
+  const openModal = (videoSrc) => {
+    if (videoSrc) {
+      setSelectedVideo(videoSrc.url || Videos());
+      setVideoSources(videoSrc.sources || []);
+      setCurrentSource(videoSrc.sources ? videoSrc.sources[0]?.url : videoSrc.url);
+      setModalIsOpen(true);
+    } else {
+      console.error('No video source provided');
+    }
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
     setSelectedVideo(null);
+    setVideoSources([]);
+    setCurrentSource(null);
+  };
+
+  const setEqualHeight = () => {
+    const cards = document.querySelectorAll('.LastNew_card');
+    let maxHeight = 0;
+
+    cards.forEach(card => {
+      card.style.height = 'auto';
+      const height = card.offsetHeight;
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    });
+
+    cards.forEach(card => {
+      card.style.height = `${maxHeight}px`;
+    });
   };
 
   useEffect(() => {
-    const setEqualHeight = () => {
-      const cards = document.querySelectorAll('.LastNew_card');
-      let maxHeight = 0;
-
-      cards.forEach(card => {
-        card.style.height = 'auto'; // Reset height to auto
-        const height = card.offsetHeight;
-        if (height > maxHeight) {
-          maxHeight = height;
-        }
-      });
-
-      cards.forEach(card => {
-        card.style.height = `${maxHeight}px`;
-      });
-    };
-
     setEqualHeight();
     window.addEventListener('resize', setEqualHeight);
 
@@ -113,15 +137,15 @@ const LastNew = ({LastNewsDetail}) => {
 
   return (
     <div>
-      <div className='LastNew-all ' id='LastNew-all'>
+      <div className='LastNew-all' id='LastNew-all'>
         <Slider {...settings}>
-          {LastNewsDetail.map(({ id, videoSrc,time, text,para, link, videoImg, isVideo }) => (
+          {LastNewsDetail.map(({ id, videoSrc, time, text, para, link, videoImg }) => (
             <div key={id} className='LastNew_card'>
               <div className='LastNew_card_img'>
-                <img src={videoImg} alt={text} onClick={() => openModal(videoSrc, isVideo)} style={{ cursor: 'pointer' }} />
+                <img src={videoImg} alt={text} onClick={() => openModal(videoSrc)} style={{ cursor: 'pointer' }} />
               </div>
               <div className="playbutton">
-              <CiPlay1 className='play-icon' />
+                <CiPlay1 className='play-icon' />
               </div>
               <div className='LastNew_card_text text_line'>
                 {link ? <a href={link}><hr /></a> : null}
@@ -140,32 +164,22 @@ const LastNew = ({LastNewsDetail}) => {
             contentLabel='Selected Video'
             className="video-model"
             id='model-video'
-            overlayClassName="video-modal-overly"
+            overlayClassName="video-modal-overlay"
           >
-            <button onClick={closeModal} className='close-button'>Close</button>
+            <button onClick={closeModal} id='close-button'><MdClose /></button>
             <div className="video-container">
-              {isVideo ? (
-                <video width="100%" height="100vh" controls>
-                  <source src={selectedVideo} type='video/mp4' />
+              <div className={`video-player ${isFullscreen ? 'fullscreen' : ''}`}>
+                <video ref={videoRef} controls>
+                  <source src={currentSource || selectedVideo} type='video/mp4' />
                   Your browser does not support the video tag.
                 </video>
-              ) : (
-                <iframe
-                  width="100%"
-                  height="auto"
-                  src={selectedVideo}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="Video"
-                ></iframe>
-              )}
+              </div>
             </div>
           </Modal>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default LastNew;

@@ -40,30 +40,7 @@ export const NavLinks = [
       { label: 'THE MANDALORIAN', link: '/books-comics' },
     ],
   },
-  {
-    title: 'GAMES + INTERACTIVE',
-    items: [
-      { label: 'VIEW ALL', link: '/TheLastest' },
-      { label: 'STAR WORLD OUTLAWS', link: '/the-acolyte' },
-      { label: 'GAMES + APPS', link: '/the-bad-batch' },
-      { label: 'VR + IMMERSIVE', link: '/the-high-republic' },
-    ]
-  },
-  {
-    title: 'DATABANK',
-    items: [
-      { label: 'ALL DATABANK', link: '/TheLastest' },
-      { label: 'ERAS', link: '/the-acolyte' },
-    ]
-  },
-  {
-    title: 'DISNEY+',
-    items: [
-      { label: 'STRAM NOW', link: '/TheLastest' },
-      { label: 'EXPLORE', link: '/the-acolyte' },
-      { label: 'THE DISNEY BUNDLE', link: '/the-bad-batch' },
-    ]
-  },
+ 
   
 ];
 
