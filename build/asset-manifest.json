@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.349b60fd.css",
-    "main.js": "/static/js/main.aa0714fb.js",
+    "main.js": "/static/js/main.bb16c183.js",
     "static/js/453.ddba791a.chunk.js": "/static/js/453.ddba791a.chunk.js",
     "static/media/main (1).mp4": "/static/media/main (1).8fea76138187afa42619.mp4",
     "static/media/the-acolyte-104-main_8af5a1d1.jpeg": "/static/media/the-acolyte-104-main_8af5a1d1.40bdf058e0f0f3646e85.jpeg",
@@ -66,11 +66,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.349b60fd.css.map": "/static/css/main.349b60fd.css.map",
-    "main.aa0714fb.js.map": "/static/js/main.aa0714fb.js.map",
+    "main.bb16c183.js.map": "/static/js/main.bb16c183.js.map",
     "453.ddba791a.chunk.js.map": "/static/js/453.ddba791a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.349b60fd.css",
-    "static/js/main.aa0714fb.js"
+    "static/js/main.bb16c183.js"
   ]
 }
