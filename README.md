@@ -20,5 +20,5 @@ Modal: Displays a video player with custom styles and fast-forward functionality
 
 Deployment
 
-The application will be available at https://starfans.netlify.app/.
+The application will be available at https://starworldfans.netlify.app/.
 
