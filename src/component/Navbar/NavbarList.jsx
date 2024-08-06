@@ -31,6 +31,7 @@ export const NavLinks = [
   {
     title: 'SERIES',
     link:'/Series',
+    items:[]
   },
  
   

@@ -39,9 +39,7 @@ const LastNew = () => {
   const { data: LastNewsDetail, status } = useSelector((state) => state.lastNew);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [videoSources, setVideoSources] = useState([]);
   const [currentSource, setCurrentSource] = useState(null);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -53,7 +51,6 @@ const LastNew = () => {
   const openModal = (videoSrc) => {
     if (videoSrc) {
       setSelectedVideo(videoSrc.url || Videos());
-      setVideoSources(videoSrc.sources || []);
       setCurrentSource(videoSrc.sources ? videoSrc.sources[0]?.url : videoSrc.url);
       setModalIsOpen(true);
     } else {
@@ -64,7 +61,6 @@ const LastNew = () => {
   const closeModal = () => {
     setModalIsOpen(false);
     setSelectedVideo(null);
-    setVideoSources([]);
     setCurrentSource(null);
   };
 
@@ -168,7 +164,7 @@ const LastNew = () => {
           >
             <button onClick={closeModal} id='close-button'><MdClose /></button>
             <div className="video-container">
-              <div className={`video-player ${isFullscreen ? 'fullscreen' : ''}`}>
+              <div className="video-player">
                 <video ref={videoRef} controls>
                   <source src={currentSource || selectedVideo} type='video/mp4' />
                   Your browser does not support the video tag.
