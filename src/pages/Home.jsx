@@ -64,7 +64,7 @@ const Home = () => {
         )}
       <div >
         <div className="news_header">
-            <h1 className='color-white'>Expore More</h1>
+            <h1 className='color-white'>Explore More</h1>
         </div>
         <div className='line-adjust'>
         <hr className='color-white' />
