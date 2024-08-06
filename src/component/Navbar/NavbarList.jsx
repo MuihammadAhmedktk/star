@@ -31,14 +31,6 @@ export const NavLinks = [
   {
     title: 'SERIES',
     link:'/Series',
-    items: [
-      { label: 'ALL SERIES', link: '/Series' },
-      { label: 'THE ACOLYTE', link: '/the-acolytes' },
-      { label: 'THE BAD BATCH', link: '/the-bad-batch' },
-      { label: 'AHSOKA', link: '/the-high-republic' },
-      { label: 'ANDOOR', link: '/quizzes-polls' },
-      { label: 'THE MANDALORIAN', link: '/books-comics' },
-    ],
   },
  
   
