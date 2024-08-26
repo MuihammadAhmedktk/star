@@ -7,9 +7,10 @@ import Card from '../component/Card/Card'
 import SoicalCard from '../component/SocialCard/SoicalCard'
 import NewFeature from '../component/NewFeature/NewFeature'
 import LastNew from '../component/LastNew/LastNew'
-import ExploreMore from '../component/ExploreMore/ExploreMore'
+import { ExploreMoreDetail, CardDetail } from '../Api/Data';
+import CardSlider from '../component/CardSlider/CardSlider';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import StarMovie from '../component/Star-Movies/StarMovie'
+// import StarMovie from '../component/Star-Movies/StarMovie'
 import { Link } from 'react-router-dom'
 import { Movie_Comp } from '../Api/Data';
 
@@ -31,7 +32,7 @@ const Home = () => {
       <div className='three-card-bg-color'>
         <div className=' pad-r-l-all'>
       <Card/>
-      <StarMovie/>
+      <CardSlider CardDetail={CardDetail}/>
       <SoicalCard/>
         </div>
       </div>
@@ -70,7 +71,7 @@ const Home = () => {
         <hr className='color-white' />
         </div>
       </div>
-      <ExploreMore/>
+      <CardSlider CardDetail={ExploreMoreDetail}/>
       </div>
     </div>
   )

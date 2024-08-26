@@ -192,48 +192,57 @@ a{
   align-items: center;
   height: 100vh;
 }
-/* arrow of silde right left can edit expcted hero slide */
-.slick-slide {
+/* CardBtnSlider */
+.containerstyles{
+  position: absolute;
+  bottom: 10px; /* Position the buttons slightly above the bottom of the slide */
+  width: 100%;
   display: flex;
-  padding: 0 10px;
+  top: 40%;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: transparent;
+  z-index: 99999;
+  height: 5%;
+
+}
+.btnStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #625C58;
+  color: #fff;
 }
 
-.slick-list {
-  margin: 0 -10px;
-}
-
-.custom-arrow {
-  width: 50px; 
-  height: 50px; 
-  background: transparent; 
-  color: black; 
-  z-index: 1;
+.iconStyles {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 24px;
+  color: #000000;
 }
 
-.custom-arrow::before {
-  font-size: 60px; 
-  color: rgb(255, 255, 255); 
-}
-
-.slick-prev {
-  left: -17px; 
-}
-
-.slick-next {
-  top:35%;
-  right: -9px; 
-}
 
 @media  (max-width:768px) {
   .line-adjust hr{
     width: 76%; 
    margin-left: 5.3rem;
   }
+  .containerstyles{
+    top: 45%;
+  }
 }
 @media (min-width:425px) and (max-width:768px) {
+  .pad-r-l-all{
+    margin-left: 2.0rem;
+    margin-right: 2.0rem;
+  }
   .movie_btn button:first-child{
     height: 7vh;
     padding: 0px;
@@ -244,17 +253,6 @@ a{
     height: 7vh;
     padding: 0;
   } 
-  .slick-prev{
-    left: -9px;
-    top:8rem;
-  }
-  .slick-next{
-    top:8rem;
-    right: -10px;
-  }
-  .custom-arrow::before{
-    font-size: 50px;
-  }
   .news_header{
     padding-left: .5rem;
     padding-right:.5rem ;
@@ -274,12 +272,12 @@ a{
     font-size: 1.4rem;
   }
  
- 
 }
 @media (min-width:375px) and (max-width:425px){
   .movie_btn{
     flex-direction: column;
     gap: 0px;
+    margin-left: 0rem;
   }
     .movie_btn button:first-child{
       margin: 12px auto;
@@ -287,17 +285,7 @@ a{
     .movie_btn button:last-child{
     margin: 12px auto;
   }
-  .slick-prev{
-    left: -9px;
-    top:8rem;
-  }
-  .slick-next{
-    top:8rem;
-    right: -2px;
-  }
-  .custom-arrow::before{
-    font-size: 50px;
-  }
+ 
   .news_header{
     padding-left: .5rem;
     padding-right:.5rem ;
@@ -322,21 +310,15 @@ a{
   .movie_btn button:last-child{
     margin: 12px auto;
   }
-    .movie_btn{
-      flex-direction: column;
-      gap: 0px;
-    }
-    .slick-prev{
-      left: -9px;
-      top:8rem;
-    }
-    .slick-next{
-      top:8rem;
-      right: -10px;
-    }
-    .custom-arrow::before{
-      font-size: 50px;
-    }
+  .movie_btn{
+    flex-direction: column;
+    gap: 0px;
+    margin-left: -4rem;
+  }
+  .pad-r-l-all{
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
     .news_header{
       padding-left: .5rem;
       padding-right:.5rem ;
@@ -363,5 +345,10 @@ a{
   }
   .movie_btn button:last-child{
   margin: 12px auto;
+}
+.movie_btn{
+  flex-direction: column;
+  gap: 0px;
+  margin-left: 0rem;
 }
 }

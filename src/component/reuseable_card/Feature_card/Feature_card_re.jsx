@@ -29,27 +29,26 @@ const toggleExpand =(id)=>{
     <div>
            <div className='morenews'>
     {
-        featurecard.slice(0,visableCount).map(({id,Img,text,date})=>
+        featurecard.slice(0,visableCount).map((item,index)=>
         {
-            const { truncated, fullText } =textSlice (text, 20);
-            const isExpanded = expandedCard[id];
+            const { truncated, fullText } =textSlice (item.text, 20);
+            const isExpanded = expandedCard[item.id];
             return(
-                <div className="news_card" key={id}>
+                <div className="news_card" key={index}>
                 <div className="news_card_img">
-                    <img src={Img} alt="" />
+                    <img src={item.Img} alt="" />
                 </div>
                 <div className="news_card_text">
                 <p>
-                 
               {isExpanded ? fullText : truncated}
               <p
                 style={{ color: '#fff', cursor: 'pointer', fontSize:'1rem', textDecoration:'underline'}}
-                onClick={() => toggleExpand(id)}
+                onClick={() => toggleExpand(item.id)}
               >
                {isExpanded ? ' Read Less' : 'Read More'}
               </p>
             </p>
-                    <p>{date}</p>
+                    <p>{item.date}</p>
                 </div>
             </div>
             )})}  

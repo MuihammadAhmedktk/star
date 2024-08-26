@@ -299,8 +299,6 @@ display: block;
   .navbar-text p:first-child{
     display: none;
   }
-  .slide.first-slide .mobile-img{
-    height: 50vh;
-  }
+ 
 
 }

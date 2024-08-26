@@ -74,7 +74,7 @@
     }
      .movie_heading{
         left: 7rem;
-        top: 65rem;
+        top: 66rem;
       }
       .movie_heading h2{
         display: block;
@@ -118,7 +118,7 @@
   }
   .movie_heading{
     left: 0px;
-    top: 33rem;
+    top: 34rem;
     width: 100%;
   }
   .movie_para_img p{
@@ -126,7 +126,6 @@
   }
  
 }
-
 @media (min-width:393px) and (max-width:412px){
   .movie_heading {
     top: 36rem;
@@ -135,16 +134,21 @@
   height: 101vh;
 }
 }
-
 @media (min-width:375px) and (max-width:393px) {
   .movie_blog_all {
-    height: 109vh;
+    height: 150vh;
 }
 .movie_heading{
-  top: 36rem;
+  top: 30rem;
+  left: 5rem;
+  width: 284px;
 }
+.movie_para_img p {
+  width:77%;
 }
-@media (min-width:320px) and (max-width:375px) {
+
+}
+@media (min-width:360px) and (max-width:375px) {
  
   .movie_blog img:nth-child(2){
     display: block;
@@ -166,17 +170,23 @@
     left: 0px;
     top: 30rem;
     width: 100%;
-  }
+  } .movie_blog img:first-child{
+    display: none;
+    }
   .movie_btn button:first-child{
     margin: 12px auto;
   }
   .movie_btn button:last-child{
   margin: 12px auto;
 }
+.movie_blog img:nth-child(2){
+  display: block;
+  height: 55%;
+}
 }
 @media (max-width:320px) and (min-width:300px) {
   .movie_blog_all {
-    height: 162vh;
+    height: 134vh;
 }
 .movie_heading {
   top: 26rem;

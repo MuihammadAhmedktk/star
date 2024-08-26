@@ -1,10 +1,8 @@
 .Movie_card-all {
     padding-bottom: 20px;
-   
+    padding-top: 20px;
 }
 .Movie_card {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
     border-radius: 12px;
     background-color: #1D1E1F;
 }
@@ -12,7 +10,7 @@
    border-top-right-radius: 12px;
    border-top-left-radius: 12px;
     width: 100%;
-    height: 200px;
+    height: 250px;
     position: relative;
 }
 .Movie_card_img img {
@@ -49,7 +47,7 @@
     width: 3rem;
 }
 .Movie_card_text p {
-    margin-top: .6rem;
+    margin-top: .3rem;
     color: white;
 }
 .para{
@@ -62,15 +60,6 @@
     padding-left:0.5rem ;
     padding-right: 0.5rem;
   }
-  .slick-prev{
-    left: -9px;
-    top:8rem;
-  }
-  .slick-next{
-    top:8rem;
-    right: -10px;
-  }
-  .custom-arrow::before{
-    font-size: 50px;
-  }
+  
+  
 }

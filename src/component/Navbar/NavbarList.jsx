@@ -31,9 +31,39 @@ export const NavLinks = [
   {
     title: 'SERIES',
     link:'/Series',
-    items:[]
+    items: [
+      { label: 'ALL SERIES', link: '/Series' },
+      { label: 'THE ACOLYTE', link: '/the-acolytes' },
+      { label: 'THE BAD BATCH', link: '/the-bad-batch' },
+      { label: 'AHSOKA', link: '/the-high-republic' },
+      { label: 'ANDOOR', link: '/quizzes-polls' },
+      { label: 'THE MANDALORIAN', link: '/books-comics' },
+    ],
   },
- 
+  {
+    title: 'GAMES + INTERACTIVE',
+    items: [
+      { label: 'VIEW ALL', link: '/TheLastest' },
+      { label: 'STAR WORLD OUTLAWS', link: '/the-acolyte' },
+      { label: 'GAMES + APPS', link: '/the-bad-batch' },
+      { label: 'VR + IMMERSIVE', link: '/the-high-republic' },
+    ]
+  },
+  {
+    title: 'DATABANK',
+    items: [
+      { label: 'ALL DATABANK', link: '/TheLastest' },
+      { label: 'ERAS', link: '/the-acolyte' },
+    ]
+  },
+  {
+    title: 'DISNEY+',
+    items: [
+      { label: 'STRAM NOW', link: '/TheLastest' },
+      { label: 'EXPLORE', link: '/the-acolyte' },
+      { label: 'THE DISNEY BUNDLE', link: '/the-bad-batch' },
+    ]
+  },
   
 ];
 

@@ -40,7 +40,7 @@ const HumberMenu = () => {
       </div>
       <div className='navbar-text color-white'><p>STARS WARS: THE ACOLYTE I NOW STREAMING ON DISNEY+</p></div>
       <nav className={`menu_list ${menuVisible ? 'open' : ''}`}>
-        <ul className='menu_list_ul'>
+        {/* <ul className='menu_list_ul'>
           {NavLinks.map((menu, index) => (
             <li key={index} className={openMenus[index] ? 'open' : ''}>
               <p  onClick={(e) => { e.preventDefault(); handleToggle(index); }}>
@@ -55,7 +55,37 @@ const HumberMenu = () => {
               )}
             </li>
           ))}
+        </ul> */}
+        <ul className='menu_list_ul'>
+  {NavLinks.map((menu, index) => (
+    <li key={index} className={openMenus[index] ? 'open' : ''}>
+      <p>
+        <a href={menu.link} onClick={() => handleToggle(index)}>
+          {menu.title}
+        </a>
+        <span
+          onClick={(e) => {
+            e.stopPropagation();
+            handleToggle(index);
+          }}
+          className={openMenus[index] ? 'rotate' : ''}
+        >
+          <MdOutlineKeyboardArrowDown className='icon-size' />
+        </span>
+      </p>
+      {openMenus[index] && (
+        <ul className="sub-menu">
+          {menu.items.map((item, subIndex) => (
+            <li key={subIndex}>
+              <a href={item.link}>{item.label}</a>
+            </li>
+          ))}
         </ul>
+      )}
+    </li>
+  ))}
+</ul>
+
         <hr />
         <div className='small-menu-user'>
         <FiUser className='icons-color'/> <span className='color-white text-size'>Login</span>

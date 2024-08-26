@@ -2,9 +2,9 @@ import React from 'react'
 import img1 from "../assests/moivie_card/the-acolyte-character-posters-featured-2_15c6967f.jpeg"
 import img2 from "../assests/moivie_card/the-acolyte-104-main_8af5a1d1.jpeg"
 import img3 from "../assests/moivie_card/the-acolyte-creature-feature-bazil-featured_17dde8c4.jpeg"
-import MovieCard from '../component/reuseable_card/Movie_Card/MovieCard';
 import BrowseFlim from '../component/reuseable_card/Browse Flims/BrowseFlim';
 import { CardDetail } from '../Api/Data';
+import CardSlider from '../component/CardSlider/CardSlider';
 
 const menuOptions = [
   { id: 1, text: 'ALL', link: '/all', count: 25 },
@@ -44,9 +44,9 @@ const Series = () => {
         <hr/>
         </div>
       </div>
-      <MovieCard CardDetail={CardDetail}/>
+      <CardSlider CardDetail={CardDetail}/>
       <div className='heading-h2'>
-        <h2 className='color-white'>Latest News + Feature</h2>
+        <h2 className='color-white'>Browser Series</h2>
         <div >
         <hr/>
         </div>

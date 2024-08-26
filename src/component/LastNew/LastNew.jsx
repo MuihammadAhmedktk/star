@@ -1,38 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Modal from 'react-modal';
 import { CiPlay1 } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
 import { fetchLastNewsDetail } from '../../Redux/Slice/lastNewSlice';
 import { Videos } from '../../Api/Data';
 import "./LastNew.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import CardBtnslider from '../CardBtnslider';
 
 Modal.setAppElement('#root');
-
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} custom-arrow next-arrow`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} custom-arrow prev-arrow`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-};
 
 const LastNew = () => {
   const dispatch = useDispatch();
@@ -41,6 +19,7 @@ const LastNew = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [currentSource, setCurrentSource] = useState(null);
   const videoRef = useRef(null);
+  const [project, setProject] = useState(LastNewsDetail[0]);
 
   useEffect(() => {
     if (status === 'idle') {
@@ -64,94 +43,85 @@ const LastNew = () => {
     setCurrentSource(null);
   };
 
-  const setEqualHeight = () => {
-    const cards = document.querySelectorAll('.LastNew_card');
-    let maxHeight = 0;
 
-    cards.forEach(card => {
-      card.style.height = 'auto';
-      const height = card.offsetHeight;
-      if (height > maxHeight) {
-        maxHeight = height;
-      }
-    });
 
-    cards.forEach(card => {
-      card.style.height = `${maxHeight}px`;
-    });
-  };
+ 
+  const handleSlideChange = (swiper) => {
+    const currentSlide = swiper.activeIndex;
+    setProject(LastNewsDetail[currentSlide]);
+    // setTimeout(() => {
+    //   const cards = document.querySelectorAll('.LastNew_card');
+    //   let maxHeight = 0;
 
-  useEffect(() => {
-    setEqualHeight();
-    window.addEventListener('resize', setEqualHeight);
+    //   cards.forEach(card => {
+    //     card.style.height = 'auto';
+    //     const height = card.offsetHeight;
+    //     if (height > maxHeight) {
+    //       maxHeight = height;
+    //     }
+    //   });
 
-    return () => {
-      window.removeEventListener('resize', setEqualHeight);
-    };
-  }, []);
-
-  const settings = {
-    dots: false,
-    arrows: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 10000,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    //   cards.forEach(card => {
+    //     card.style.height = `${maxHeight}px`;
+    //   });
+    // }, 0); // Recalculate height after slide change
   };
 
   return (
     <div>
       <div className='LastNew-all' id='LastNew-all'>
-        <Slider {...settings}>
-          {LastNewsDetail.map(({ id, videoSrc, time, text, para, link, videoImg }) => (
-            <div key={id} className='LastNew_card'>
+      <Swiper
+        slidesPerView={3} // Default to 3 slides per view
+        spaceBetween={30}
+        handleSlideChange={handleSlideChange}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          425: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
+      >
+          {LastNewsDetail.map((item,index) => 
+            { return <SwiperSlide key={index}>
+              <div  className='LastNew_card'>
               <div className='LastNew_card_img'>
-                <img src={videoImg} alt={text} onClick={() => openModal(videoSrc)} style={{ cursor: 'pointer' }} />
+                <img src={item.videoImg} alt={item.text} onClick={() => openModal(item.videoSrc)} style={{ cursor: 'pointer' }} />
               </div>
               <div className="playbutton">
-                <CiPlay1 className='play-icon' />
+                <CiPlay1 className='play-icon'  onClick={() => openModal(item.videoSrc)} style={{ cursor: 'pointer' }}/>
               </div>
               <div className='LastNew_card_text text_line'>
-                {link ? <a href={link}><hr /></a> : null}
-                <p className='color-white'>{text}</p>
-                <p className='color-white'>{para}</p>
+                {item.link ? <a href={item.link}><hr /></a> : null}
+                <p className='color-white'>{item.text}</p>
+                <p className='color-white'>{item.para}</p>
               </div>
-              <p className='time color-white'>{time}</p>
+              <p className='time color-white'>{item.time}</p>
             </div>
-          ))}
-        </Slider>
+            </SwiperSlide>}
+            
+          )}
+          <CardBtnslider/>
+        </Swiper>
 
         {selectedVideo && (
           <Modal

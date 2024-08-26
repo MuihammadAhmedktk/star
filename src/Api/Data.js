@@ -202,7 +202,7 @@ export const CardDetail = [
     id: 1,
     img: starimg2,
     text: "Day Episode Guide | Te Acolyte",
-    para: "Racing to the net target, the Jedi head to new world as they close in on the clever assassin.",
+    para: "Racing to the net target",
     link: '/#'
   },
   {
@@ -214,7 +214,7 @@ export const CardDetail = [
   {
     id: 3,
     img: starimg3,
-    text: "Inside The Acolyte Creature Shop; Meet Bazil, the Tynnan Tracker - First Details"
+    text: "Inside The Acolyte Creature Shop - First Details"
   }
 ];
 
@@ -457,9 +457,6 @@ export const featurecard  =[
   text:"YOu'll Dig This DIY Bazil Basil Planter",
   date: moment().format('MMMM DD,YYYY'),
 },
-
-  
-
  ]
 
  export const video =[  {
@@ -521,8 +518,6 @@ export const Fourcards = () => [
   ]
 
   // LastNewsFeature
-
- 
   export  const Card = [
     {
       id: 1,

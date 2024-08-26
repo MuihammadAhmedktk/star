@@ -64,6 +64,7 @@
     }
     .card-all{
         grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
     }
     .card_text{
         padding-left: 12px;
@@ -72,6 +73,10 @@
 @media (max-width:425px) and (min-width:375px) {
     .card-all{
         grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .card{
+        height: 5.5rem;
     }
     .card_text p{
         font-size: 12px;
@@ -90,5 +95,8 @@
 @media (max-width:320px) and (min-width:300px) {
     .card{
         height: 5.5rem;
+    }
+    .card_text p{
+        font-size: .7rem;
     }
 }

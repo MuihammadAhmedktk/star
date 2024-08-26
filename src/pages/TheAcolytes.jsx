@@ -1,12 +1,12 @@
 import React from 'react'
 import Movie from '../component/Movie_Blog/Movie'
 import NewFeature from '../component/NewFeature/NewFeature';
-import MovieCard from '../component/reuseable_card/Movie_Card/MovieCard';
 import SoicalCard from '../component/SocialCard/SoicalCard';
 import LastNew from '../component/LastNew/LastNew';
 import { Movie_Comp } from '../Api/Data';
 import { video } from '../Api/Data'
 import { episode } from '../Api/Data'
+import CardSlider from '../component/CardSlider/CardSlider';
 
 const TheAcolytes = () => {
   return (
@@ -19,7 +19,7 @@ const TheAcolytes = () => {
         <hr/>
         </div>
       </div>
-        <MovieCard CardDetail={episode}/>
+        <CardSlider CardDetail={episode}/>
       <div className='heading-h2'>
         <h2 className='color-white'>Latest News + Features</h2>
         <div >
