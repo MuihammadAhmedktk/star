@@ -170,8 +170,6 @@ import weekFeatureimg3 from '../assests/weekstar/feature-week/star-wars-valentin
 import weekFeatureimg4 from '../assests/weekstar/feature-week/2023-emmy-nominations-feature_6942a883.jpeg'
 import weekFeatureimg5 from '../assests/weekstar/feature-week/ahsoka-trailer-key-art-article-feature_47afd6a2.jpeg'
 import weekFeatureimg6 from '../assests/weekstar/feature-week/ahsoka-date-featured_49f1d5aa.jpeg'
-import weekFeatureimg7 from '../assests/weekstar/feature-week/ahsoka-date-featured_49f1d5aa.jpeg'
-import weekFeatureimg8 from '../assests/weekstar/feature-week/star-wars-day-merchandise-2024-feature_0f3ab696.jpeg'
 
 // This Week in stars Wars
 import weekCardimg1 from '../assests/weekstar/Card/thrs-singlehero-landing-mobile_df19c13e_4b58028c.jpeg'

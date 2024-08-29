@@ -1,65 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import  "./SoicalCard.css";
+import React, { useEffect } from 'react';
+import './SoicalCard.css';
 import { SoicalData } from '../../Api/Data';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import CardBtnslider from '../CardBtnslider';
 
-
 const SoicalCard = () => {
-  const [project, setProject] = useState(SoicalData [0]);
+  const adjustCardHeight = () => {
+    const cards = document.querySelectorAll('.Social_card');
+    let maxHeight = 0;
 
-  const handleSlideChange = (swiper) => {
-    const currentSlide = swiper.activeIndex;
-    setProject(SoicalData[currentSlide]);
-    setTimeout(() => {
-      const cards = document.querySelectorAll('.Movie_card');
-      let maxHeight = 0;
+    cards.forEach(card => {
+      card.style.height = 'auto'; // Reset height to auto
+      const height = card.offsetHeight;
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    });
 
-      cards.forEach(card => {
-        card.style.height = 'auto';
-        const height = card.offsetHeight;
-        if (height > maxHeight) {
-          maxHeight = height;
-        }
-      });
-
-      cards.forEach(card => {
-        card.style.height = `${maxHeight}px`;
-      });
-    }, 0); // Recalculate height after slide change
+    cards.forEach(card => {
+      card.style.height = `${maxHeight}px`;
+    });
   };
+
+  const handleSlideChange = () => {
+    // Adjust card height after slide change
+    requestAnimationFrame(adjustCardHeight);
+  };
+
   useEffect(() => {
-    const setEqualHeight = () => {
-      const cards = document.querySelectorAll('.Soical_card');
-      let maxHeight = 0;
-
-      cards.forEach(card => {
-        card.style.height = 'auto'; // Reset height to auto
-        const height = card.offsetHeight;
-        if (height > maxHeight) {
-          maxHeight = height;
-        }
-      });
-
-      cards.forEach(card => {
-        card.style.height = `${maxHeight}px`;
-      });
-    };
-
-    setEqualHeight();
-    window.addEventListener('resize', setEqualHeight);
+    adjustCardHeight();
+    window.addEventListener('resize', adjustCardHeight);
 
     return () => {
-      window.removeEventListener('resize', setEqualHeight);
+      window.removeEventListener('resize', adjustCardHeight);
     };
-  }, [SoicalData]);
-    
+  }, []); // Empty dependency array to run effect only once
+
   return (
-    <div className='Soical_card-all '>
-        <Swiper
-        slidesPerView={5} // Default to 3 slides per view
+    <div className='Soical_card-all'>
+      <Swiper
+        slidesPerView={5}
         spaceBetween={30}
         onSlideChange={handleSlideChange}
         breakpoints={{
@@ -93,23 +75,23 @@ const SoicalCard = () => {
           },
         }}
       >
-        {SoicalData.map((item,index) => {
-          return <SwiperSlide key={index}>
-                <div className='Soical_card'>
-            <div className='Social_card_img'>
-              <img src={item.img} alt='Social_card img' />
+        {SoicalData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className='Social_card'>
+              <div className='Social_card_img'>
+                <img src={item.img} alt='Social card img' />
+              </div>
+              <div className='Social_card_text text_line'>
+                <a href={item.link}><hr /></a>
+                <p>{item.text}</p>
+              </div>
             </div>
-            <div className='Soical_card_text text_line'>
-              <a href={item.link}><hr /></a>
-              <p>{item.text}</p>
-            </div>
-          </div>
           </SwiperSlide>
-        })}
-        <CardBtnslider  />
+        ))}
+        <CardBtnslider />
       </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default SoicalCard
+export default SoicalCard;
