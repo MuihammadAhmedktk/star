@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useCallback} from 'react'
 import DatabankImages from './DatabankImages'
 import DatabankMenu from './DatabankMenu'
 import './Databank.css'
@@ -8,19 +8,18 @@ const Databank = ({Images, Databankmenu}) => {
     const [selectedMenu, setSelectedMenu] = useState('ALL');
     const [menuList, setMenuList] = useState(Databankmenu);
 
-     // Mapping function
+   // Mapping function
+  // Calculate menu counts based on data
+  const calculateMenuCounts = useCallback(() => {
+    return Databankmenu.map(menuItem => {
+      const count = DataAcolytes[menuItem.text]?.length || 0;
+      return { ...menuItem, count };
+    });
+  }, [Databankmenu]);
 
-      // Calculate menu counts based on data
-      const calculateMenuCounts = () => {
-        return Databankmenu.map(menuItem => {
-          const count = DataAcolytes[menuItem.text]?.length || 0;
-          return { ...menuItem, count };
-        });
-    };
-
-    useEffect(() => {
-        setMenuList(calculateMenuCounts());
-    }, []);
+  useEffect(() => {
+    setMenuList(calculateMenuCounts());
+  }, [calculateMenuCounts]);
  
   return (
     <div className='databank'>
