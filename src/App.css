@@ -240,8 +240,8 @@ a{
 }
 @media (min-width:425px) and (max-width:768px) {
   .pad-r-l-all{
-    margin-left: 2.0rem;
-    margin-right: 2.0rem;
+    margin-left: 1.0rem;
+    margin-right: 1.0rem;
   }
   .movie_btn button:first-child{
     height: 7vh;
@@ -316,8 +316,8 @@ a{
     margin-left: -4rem;
   }
   .pad-r-l-all{
-    margin-left: 0.1rem;
-    margin-right: 0.1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
     .news_header{
       padding-left: .5rem;

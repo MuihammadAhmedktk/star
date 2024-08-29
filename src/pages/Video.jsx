@@ -4,8 +4,7 @@ import SearchBar from '../component/reuseable_card/SearchBar/SearchBar'
 import LastNewsFeature from '../component/reuseable_card/LargeTwoCard/LastNewsFeature'
 import BrowserVideo from '../component/reuseable_card/Browsethevideo/BrowserVideo'
 import TwoCard from '../component/TwoCard/TwoCard'
-import { MenuList } from '../Api/Data'
-import { videos } from '../Api/Data'
+import { BrowseMenuList, videos } from '../Api/Data'
 const Video = () => {
   return (
     <div className='pad-r-l-all'>
@@ -27,7 +26,7 @@ const Video = () => {
         <hr/>
         </div>
       </div>
-      <BrowserVideo videos={videos} menuList={MenuList} />
+      <BrowserVideo videos={videos} BrowseMenuList={BrowseMenuList} />
       <div className='heading-h2'>
         <h2 className='color-white'>More StarWars.Com Video Series</h2>
         <div >

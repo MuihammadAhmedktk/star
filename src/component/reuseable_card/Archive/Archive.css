@@ -28,7 +28,7 @@
 @media (min-width: 425px) and (max-width: 768px) {
     
     .morenews_1{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }

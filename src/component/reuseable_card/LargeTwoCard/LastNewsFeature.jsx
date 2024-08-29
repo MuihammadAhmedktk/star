@@ -2,7 +2,7 @@ import React from 'react'
 import './LastNewsFeature.css'
 import img0 from "../../../assests/featureCard/the-acolyte-highlights-teach-corrupt_article-feature_23fa6b1a.jpeg"
 import video1 from "../../../assests/video_img/main (1).mp4"
-import { Card } from '../../../Api/Data'
+import { WeekCard } from '../../../Api/Data'
 const LastNewsFeature = ({ showVideo }) => {
   const Single = [
     {
@@ -35,7 +35,7 @@ const LastNewsFeature = ({ showVideo }) => {
         ))}
 
         <div className='feature-card-second'>
-          {Card.map(({ id, type, src, text }) => (
+          {WeekCard.map(({ id, type, src, text }) => (
             <div key={id} className='cards'>
               <div className="media-card">
                 {type === 'image' ? (

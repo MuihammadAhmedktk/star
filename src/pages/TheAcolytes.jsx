@@ -1,12 +1,10 @@
 import React from 'react'
 import Movie from '../component/Movie_Blog/Movie'
-import NewFeature from '../component/NewFeature/NewFeature';
 import SoicalCard from '../component/SocialCard/SoicalCard';
 import LastNew from '../component/LastNew/LastNew';
-import { Movie_Comp } from '../Api/Data';
-import { video } from '../Api/Data'
-import { episode } from '../Api/Data'
+import { episode,DatabankAcolytemenu,DataAcolytes,video,Movie_Comp,AcolyteLastestNewsandFeature   } from '../Api/Data'
 import CardSlider from '../component/CardSlider/CardSlider';
+import Databank from '../component/TheAcolytes/Databank';
 
 const TheAcolytes = () => {
   return (
@@ -19,20 +17,21 @@ const TheAcolytes = () => {
         <hr/>
         </div>
       </div>
-        <CardSlider CardDetail={episode}/>
+        <CardSlider CardDetail={episode }/>
       <div className='heading-h2'>
         <h2 className='color-white'>Latest News + Features</h2>
         <div >
         <hr/>
         </div>
       </div>
-      <NewFeature/>
+      <CardSlider CardDetail={ AcolyteLastestNewsandFeature}/>
       <div className='heading-h2'>
         <h2 className='color-white'>Databank: The Acolyte</h2>
         <div >
         <hr/>
         </div>
       </div>
+      <Databank Images={DataAcolytes} Databankmenu={DatabankAcolytemenu}/>
 
       <div className='heading-h2'>
         <h2 className='color-white'>Video</h2>

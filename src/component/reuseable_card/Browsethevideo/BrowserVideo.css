@@ -16,9 +16,9 @@
 .videoall_All{
    display: grid;
    grid-template-columns: repeat(2,1fr);
-   height: 20%;
-   gap: 12px;
-   padding-bottom: 120px;
+   gap: 1rem;
+   width: 100%;
+   height: 65%;
 }
 
 .videoall_card{
@@ -40,8 +40,8 @@
     font-weight: 500;
 }
 .img_card{
-    width: 60%;
-    height: 80%;
+    width: 93%;
+    height: 100%;
 }
 
 .img_card img{
@@ -52,7 +52,7 @@
 }
 .times{
     position: absolute;
-    top:4rem;
+    top:8rem;
     left: 12px;
 }
 
@@ -65,7 +65,7 @@
 .button-container {
     display: flex;
     justify-content: center;
-    height: 15vh;
+    align-items: center;
     width: 100%;
 }
 
@@ -241,6 +241,9 @@
     .times{
         top: 7rem;
     }
+    .button-container{
+        padding-top: 2rem;
+    }
    
 }
 @media (min-width:375px) and (max-width:425px) {
@@ -275,6 +278,9 @@
     .times{
         top: 4rem;
     }
+    .button-container{
+        padding-top: 1rem;
+    }
 
 }
 @media (min-width:320px) and (max-width:375px) {
@@ -304,6 +310,12 @@
     .img_card{
         height: 100%;
         width: 80%;
+    }
+    .button-container{
+        padding-top: 1rem;
+    }
+    .times{
+        top: 5rem;
     }
 }
 

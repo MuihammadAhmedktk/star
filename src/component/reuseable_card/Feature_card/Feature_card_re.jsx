@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './Fearure_card_re.css'
-import { featurecard } from '../../../Api/Data';
+
 
 const textSlice = (text, maxLength) => {
   if (text.length <= maxLength) return { truncated: text, fullText: text };
@@ -9,7 +9,7 @@ const textSlice = (text, maxLength) => {
   return { truncated, fullText: text };
 };
 
-const FeatureCardRe = () => {
+const FeatureCardRe = ({CardDetail}) => {
 const [expandedCard, setExpandedCard] =useState({});
 const[visableCount,setVisableCount] = useState(8);
 const showMore = ()=>{
@@ -29,7 +29,7 @@ const toggleExpand =(id)=>{
     <div>
            <div className='morenews'>
     {
-        featurecard.slice(0,visableCount).map((item,index)=>
+        CardDetail.slice(0,visableCount).map((item,index)=>
         {
             const { truncated, fullText } =textSlice (item.text, 20);
             const isExpanded = expandedCard[item.id];
@@ -54,7 +54,7 @@ const toggleExpand =(id)=>{
             )})}  
    </div>
    <div className='btn-adjust'>
-   {visableCount < featurecard.length ?((
+   {visableCount < CardDetail.length ?((
     <button onClick={showMore}>ShowMore</button>
    )):(<button onClick={removeMore}>RemoveMore</button>)}
    </div>

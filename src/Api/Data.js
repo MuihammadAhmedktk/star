@@ -59,10 +59,14 @@ import lastNewsFeatureImg3 from "../assests/featureCard/the-acolyte-charlie-barn
 import videoimg from "../assests/silder/thr-quiz-sw2-hero-desktop_25adae14.jpeg";
 import Video from "../assests/video_img/main (1).mp4";
 // episode
-import epsiodeimg33 from '../assests/epsiodeguide/the-acolyte-105-main-a_78367e7a.jpeg'
-import epsiodeimg22 from '../assests/epsiodeguide/the-acolyte-106-main-a_2612d879.jpeg'
-import epsiodeimg11 from '../assests/epsiodeguide/the-acolyte-107-main-a_1fba7005.jpeg'
-
+import epsiodeimg1 from '../assests/epsiodeguide/the-acolyte-101-main_75047433.jpeg'
+import epsiodeimg2 from '../assests/epsiodeguide/the-acolyte-102-main_199d50a4.jpeg'
+import epsiodeimg3 from '../assests/epsiodeguide/the-acolyte-103-main-a_6b0afe47.jpeg'
+import epsiodeimg4 from '../assests/epsiodeguide/the-acolyte-104-main_8af5a1d1.jpeg'
+import epsiodeimg5 from '../assests/epsiodeguide/the-acolyte-105-main-a_78367e7a.jpeg'
+import epsiodeimg6 from '../assests/epsiodeguide/the-acolyte-106-main-a_2612d879.jpeg'
+import epsiodeimg7 from '../assests/epsiodeguide/the-acolyte-107-main-a_1fba7005.jpeg'
+import epsiodeimg8 from '../assests/epsiodeguide/the-acolyte-108-main-a_ef0ffe1e.jpeg'
 // Four Card
 import fourcardImg1 from "../assests/fourcard/this-week-in-star-wars-card-1200x600_5e28ac96.jpeg";
 import fourcardImg2 from "../assests/fourcard/thrs-singlehero-landing-mobile_df19c13e_4b58028c.jpeg";
@@ -76,6 +80,104 @@ import mappingimg1 from "../assests/Browseflim/Star-Wars-Phantom-Menace-I-Poster
 import mappingimg3 from "../assests/Browseflim/Star-Wars-Revenge-Sith-III-Poster_646108ce.jpeg";
 import mappingimg4 from '../assests/Browseflim/Star-Wars-New-Hope-IV-Poster_c217085b.jpeg';
 import mappingimg6 from "../assests/Browseflim/Star-Wars-Return-Jedi-VI-Poster_a10501d2.jpeg";
+// Databank
+//DataBank:Acolytes
+import DA1 from '../assests/Data_Acolyte/barash-vow-main_96eb1720.jpeg';
+import DA2 from '../assests/Data_Acolyte/bazil-main_126fb9cf.jpeg';
+import DA3 from '../assests/Data_Acolyte/brendok-main_b7ed12b1.jpeg';
+import DA4 from '../assests/Data_Acolyte/brendok-coven-main_d02bbf2d.jpeg';
+import DA5 from '../assests/Data_Acolyte/brendok-fortress-main_f30bebe0.jpeg';
+import DA6 from '../assests/Data_Acolyte/bunta-tree-main_598ecc76.jpeg';
+import DA7 from '../assests/Data_Acolyte/cabuck-main_ec94a0a0.jpeg';
+import DA8 from '../assests/Data_Acolyte/cantaros-main_880327ae.jpeg';
+import DA9 from '../assests/Data_Acolyte/captain-blex-main_0ed43ce8.jpeg';
+import DA10 from '../assests/Data_Acolyte/carlac-main_a1a67aaa.jpeg';
+import DA11 from '../assests/Data_Acolyte/chancellor-drellik-main_f8d2e4d2.jpeg';
+import DA12 from '../assests/Data_Acolyte/cortosis-main_8db5eb97.jpeg';
+import DA13 from '../assests/Data_Acolyte/coruscant-main_d2fad5f2.jpeg';
+import DA14 from '../assests/Data_Acolyte/dybbuk-main_dbf23d2e.jpeg';
+import DA15 from '../assests/Data_Acolyte/the-acolyte-103-highlights-06_416b146f.jpeg';
+import DA16 from '../assests/Data_Acolyte/exile-ii-main_381567a8.jpeg';
+import DA17 from '../assests/Data_Acolyte/fallon-freighter-main_e62e62f9.jpeg';
+import DA18 from '../assests/Data_Acolyte/fillik-main_781494f8.jpeg';
+import DA19 from '../assests/Data_Acolyte/indara-main_a497ba73.jpeg';
+import DA20 from '../assests/Data_Acolyte/indaras-lightsaber-main_04417849.jpeg';
+import DA21 from '../assests/Data_Acolyte/jecki-lon-main_3b0268ec.jpeg';
+import DA22 from '../assests/Data_Acolyte/jedi-binders_3a0fb194.jpeg';
+import DA23 from '../assests/Data_Acolyte/the-acolyte-04_b168a57f.jpeg';
+import DA24 from '../assests/Data_Acolyte/jedi-outland-speeder-bike-main_1ce7b686.jpeg';
+import DA25 from '../assests/Data_Acolyte/jedi-temple-main_33841479.jpeg';
+import DA26 from '../assests/Data_Acolyte/jedi-vector-main_fae130cd.jpeg';
+import DA27 from '../assests/Data_Acolyte/kelnacca-main_9b577bbb.jpeg';
+import DA28 from '../assests/Data_Acolyte/kelnaccas-lightsaber-main_a523303d.jpeg';
+import DA29 from '../assests/Data_Acolyte/kelnaccas-shelter-main_0fea7084.jpeg';
+import DA30 from '../assests/Data_Acolyte/khofar-main_0080d9e4.jpeg';
+import DA31 from '../assests/Data_Acolyte/databank_kiadimundi_01_169_0a8842d3.jpeg';
+import DA32 from '../assests/Data_Acolyte/Lightsaber_853fb596.jpeg';
+import DA33 from '../assests/Data_Acolyte/lomi-usqi-noodle-shop-main_7cd02475.jpeg';
+import DA34 from '../assests/Data_Acolyte/mae-main-v2_3cd6c23e.jpeg';
+import DA35 from '../assests/Data_Acolyte/maes-knives-main_9f9d668b.jpeg';
+import DA36 from '../assests/Data_Acolyte/mog-adana-main_15dd087a.jpeg';
+import DA37 from '../assests/Data_Acolyte/mother-aniseya-main_7ffc85e5.jpeg';
+import DA38 from '../assests/Data_Acolyte/mother-koril-main_32e627f6.jpeg';
+import DA39 from '../assests/Data_Acolyte/olega-main_20a3235f.jpeg';
+import DA40 from '../assests/Data_Acolyte/olega-apothecary-main_e19d213d.jpeg';
+import DA41 from '../assests/Data_Acolyte/olega-jedi-temple_14f815cf.jpeg';
+import DA42 from '../assests/Data_Acolyte/osha-main_078ce84a.jpeg';
+import DA43 from '../assests/Data_Acolyte/oshas-journel-main_46d7b32f.jpeg';
+import DA44 from '../assests/Data_Acolyte/palwick-prison-ship-main_74a048be.jpeg';
+import DA45 from '../assests/Data_Acolyte/pip-main_d5294c48.jpeg';
+import DA46 from '../assests/Data_Acolyte/poison-vial-main_b460776d.jpeg';
+import DA47 from '../assests/Data_Acolyte/polan-main_d2a14d78.jpeg';
+import DA48 from '../assests/Data_Acolyte/senator-chuwant-main_f654d36f.jpeg';
+import DA49 from '../assests/Data_Acolyte/senator-rayencourt-main_f76f6472.jpeg';
+import DA50 from '../assests/Data_Acolyte/skura-main_7f5a4a06.jpeg';
+import DA51 from '../assests/Data_Acolyte/sol-main_5dd8978e.jpeg';
+import DA52 from '../assests/Data_Acolyte/sols-lightsaber-main_cb6f381f.jpeg';
+import DA53 from '../assests/Data_Acolyte/stun-blaster-main_c18b4cf1.jpeg';
+import DA54 from '../assests/Data_Acolyte/tasi-lowa-main_ff394580.jpeg';
+import DA55 from '../assests/Data_Acolyte/the-stranger-main_3872f579.jpeg';
+import DA56 from '../assests/Data_Acolyte/the-strangers-cave-main_c40d239d.jpeg';
+import DA57 from '../assests/Data_Acolyte/the-strangers-helmet-main_d05d8d82.jpeg';
+import DA58 from '../assests/Data_Acolyte/the-strangers-lightsabers-main_63735346.jpeg';
+import DA59 from '../assests/Data_Acolyte/torbin-main_e7232be8.jpeg';
+import DA60 from '../assests/Data_Acolyte/tt-8l-ot-main_3b0b13cb.jpeg';
+import DA61 from '../assests/Data_Acolyte/tynnan-main_d4407456.jpeg';
+import DA62 from '../assests/Data_Acolyte/ueda-main_989ed8e9.jpeg';
+import DA63 from '../assests/Data_Acolyte/umbramoth-main_b7eda898.jpeg';
+import DA64 from '../assests/Data_Acolyte/unknown-world-main_9e53021b.jpeg';
+import DA65 from '../assests/Data_Acolyte/vergence-main_eb0065a4.jpeg';
+import DA66 from '../assests/Data_Acolyte/vernestra-rwoh-main_1eed04f7.jpeg';
+import DA67 from '../assests/Data_Acolyte/vernestra-rwohs-lightsaber-main_9b655c39.jpeg';
+import DA68 from '../assests/Data_Acolyte/Yoda-Retina_2a7ecc26.jpeg';
+import DA69 from '../assests/Data_Acolyte/yord-fandar-main_7fdc6fb1.jpeg';
+
+// AcolyteLastestNewsandFeature
+import AcolyteLatestNews1 from '../assests/LastNew+Feature/the-acolyte-is-here-article-feature_f51c447b.jpeg';
+import AcolyteLatestNews2 from '../assests/LastNew+Feature/sdcc-2024-pavilion-169_d68c56a7.jpeg';
+import AcolyteLatestNews3 from '../assests/LastNew+Feature/twins-in-star-wars-article-featurea_23d4fd2b.jpeg';
+import AcolyteLatestNews4 from '../assests/LastNew+Feature/the-acolyte-jedi-order_article-feature_552f48ea.jpeg';
+import AcolyteLatestNews5 from '../assests/LastNew+Feature/the-acolyte-highlights-the-acolyte_article-feature_9980957f.jpeg';
+import AcolyteLatestNews6 from '../assests/LastNew+Feature/the-acolyte-character-quiz-article-feature_668f5c8c.jpeg';
+import AcolyteLatestNews7 from '../assests/LastNew+Feature/the-acolyte-stunts-featured-a_a28559f5.jpeg';
+import AcolyteLatestNews8 from '../assests/LastNew+Feature/cortosis-beskar-featured-169_1855cbbf.jpeg';
+import AcolyteLatestNews9 from '../assests/LastNew+Feature/the-acolyte-highlights-choice_article-feature_2f232a08.jpeg';
+
+// This Week in stars Wars
+import weekFeatureimg1 from '../assests/weekstar/feature-week/star-wars-day-merchandise-2024-feature_0f3ab696.jpeg'
+import weekFeatureimg2 from '../assests/weekstar/feature-week/star-wars-day-video-game-deals-feature_b639d9c6.jpeg'
+import weekFeatureimg3 from '../assests/weekstar/feature-week/star-wars-valentines-day-gift-guide-2024-collage_tall-r_ac7963cb.jpeg'
+import weekFeatureimg4 from '../assests/weekstar/feature-week/2023-emmy-nominations-feature_6942a883.jpeg'
+import weekFeatureimg5 from '../assests/weekstar/feature-week/ahsoka-trailer-key-art-article-feature_47afd6a2.jpeg'
+import weekFeatureimg6 from '../assests/weekstar/feature-week/ahsoka-date-featured_49f1d5aa.jpeg'
+import weekFeatureimg7 from '../assests/weekstar/feature-week/ahsoka-date-featured_49f1d5aa.jpeg'
+import weekFeatureimg8 from '../assests/weekstar/feature-week/star-wars-day-merchandise-2024-feature_0f3ab696.jpeg'
+
+// This Week in stars Wars
+import weekCardimg1 from '../assests/weekstar/Card/thrs-singlehero-landing-mobile_df19c13e_4b58028c.jpeg'
+import weekCardimg2 from '../assests/weekstar/Card/sws-thumb-21_c8bb8295.jpeg'
+import weekCardimg3 from '../assests/weekstar/Card/book-club-exlink_01e569ab.jpeg'
+
 // lastNewsDetail
 export const getImages = () => {
   return [
@@ -89,35 +191,36 @@ export const Videos = ()=>{
   return Video
 }
 
-export const MenuList =  [
-    { id: 1, text: 'ALL', link: '/all', count: 25 },
-    { id: 2, text: 'ASOKA', link: '/asoka', count: 5 },
-    { id: 3, text: 'THE ACOLYTE', link: '/the-acolyte', count: 3 },
-    { id: 4, text: 'ANDOR', link: '/andor', count: 4 },
-    { id: 5, text: 'THE BAD BATCH', link: '/the-bad-batch', count: 6 },
-    { id: 6, text: 'OBI-WAN KENOBI', link: '/obi-wan-kenobi', count: 7 },
-    { id: 7, text: 'THE BOOK OF BOBA FETT', link: '/the-book-of-boba-fett', count: 2 },
-    { id: 8, text: 'THE MANDALORIAN', link: '/the-mandalorian', count: 8 },
-    { id: 9, text: 'VISIONS', link: '/visions', count: 3 },
-    { id: 10, text: 'EPISODE IX', link: '/episode-ix', count: 1 },
-    { id: 11, text: 'EPISODE VIII', link: '/episode-viii', count: 1 },
-    { id: 12, text: 'EPISODE VII', link: '/episode-vii', count: 1 },
-    { id: 13, text: 'EPISODE VI', link: '/episode-vi', count: 1 },
-    { id: 14, text: 'EPISODE V', link: '/episode-v', count: 1 },
-    { id: 15, text: 'EPISODE IV', link: '/episode-iv', count: 1 },
-    { id: 16, text: 'EPISODE III', link: '/episode-iii', count: 1 },
-    { id: 17, text: 'EPISODE II', link: '/episode-ii', count: 1 },
-    { id: 18, text: 'EPISODE I', link: '/episode-i', count: 1 },
-    { id: 19, text: 'SOLO', link: '/solo', count: 1 },
-    { id: 20, text: 'ROGUE ONE', link: '/rogue-one', count: 1 },
-    { id: 21, text: 'THE CLONE WARS', link: '/the-clone-wars', count: 1 },
-    { id: 22, text: 'RESISTANCE', link: '/resistance', count: 1 },
-    { id: 23, text: 'REBELS', link: '/rebels', count: 1 },
-    { id: 24, text: 'BEHIND THE SCENES', link: '/behind-the-scenes', count: 2 },
-    { id: 25, text: 'GAMES + APPS', link: '/games-apps', count: 3 }
+// Browse More Video
+export const BrowseMenuList =  [
+    { id: 1, text: 'ALL', link: '/all'},
+    { id: 2, text: 'ASOKA', link: '/asoka',},
+    { id: 3, text: 'THE ACOLYTE', link: '/the-acolyte', },
+    { id: 4, text: 'ANDOR', link: '/andor',},
+    { id: 5, text: 'THE BAD BATCH', link: '/the-bad-batch',},
+    { id: 6, text: 'OBI-WAN KENOBI', link: '/obi-wan-kenobi',  },
+    { id: 7, text: 'THE BOOK OF BOBA FETT', link: '/the-book-of-boba-fett', },
+    { id: 8, text: 'THE MANDALORIAN', link: '/the-mandalorian',},
+    { id: 9, text: 'VISIONS', link: '/visions', },
+    { id: 10, text: 'EPISODE IX', link: '/episode-ix', },
+    { id: 11, text: 'EPISODE VIII', link: '/episode-viii',  },
+    { id: 12, text: 'EPISODE VII', link: '/episode-vii', },
+    { id: 13, text: 'EPISODE VI', link: '/episode-vi',  },
+    { id: 14, text: 'EPISODE V', link: '/episode-v', },
+    { id: 15, text: 'EPISODE IV', link: '/episode-iv', },
+    { id: 16, text: 'EPISODE III', link: '/episode-iii', },
+    { id: 17, text: 'EPISODE II', link: '/episode-ii',  },
+    { id: 18, text: 'EPISODE I', link: '/episode-i', },
+    { id: 19, text: 'SOLO', link: '/solo',  },
+    { id: 20, text: 'ROGUE ONE', link: '/rogue-one',  },
+    { id: 21, text: 'THE CLONE WARS', link: '/the-clone-wars',  },
+    { id: 22, text: 'RESISTANCE', link: '/resistance',  },
+    { id: 23, text: 'REBELS', link: '/rebels',  },
+    { id: 24, text: 'BEHIND THE SCENES', link: '/behind-the-scenes',  },
+    { id: 25, text: 'GAMES + APPS', link: '/games-apps',  }
   ];
 
-  export const videos = {
+export const videos = {
     ALL: [
         { id: 1, img: img1, text: "Lies and Heartbreak | This week! in star war dispatch", time: "0:59" },
         { id: 2, img: img2, text: "Many UNknows| This week! in star war dispatch", time: "0:59" },
@@ -134,6 +237,8 @@ export const MenuList =  [
     ],
     // Add other menu item videos here...
   };
+
+
   export const Sliderdata= [
     {
         id: 1,
@@ -485,14 +590,29 @@ export const featurecard  =[
 
 export const episode =[
   {
-      id:1,img:epsiodeimg11,text:"Choice Episode Guide | The Acolyte",para:"The tragic events that forever shaped the lives of two sisters are revisited from a new perpective, and a missing truth is revealed.",esp:"S1,E7"
+      id:1,img:epsiodeimg1,text:"Lost/Found Episode Guide | The Acolyte",para:"After a shocking crime in the distant reaches of the galaxy, the Jedi Order track down a prime suspect",esp:"S1,E1"
   },
   {
-      id:2,img:epsiodeimg22,text:"Teach / Corrupt Episode Guide | The Acolyte",para:"On a distant island world, two strangers confront unsetting questions about identity and destiny as they each plot their next moves.",esp:"S1,E6"
+      id:2,img:epsiodeimg2,text:"Revenge / Justice Episode Guide | The Acolyte",para:"An assassin strikes again on a far-flung world.this time the investing Jedi team is there to attempt a capture",esp:"S1,E2"
   },
   {
-      id:3,img:epsiodeimg33,text:"Night Episode Guide | The Acolyte",para:"In adense jungle, the Jedi are put to the test when they confront a rising darkness.",esp:"S1,E5"
+      id:3,img:epsiodeimg3,text:"Destiny Episode Guide | The Acolyte",para:"On a mysterious planet, the Jedi are put to the test when they confront a rising darkness.",esp:"S1,E3"
   },
+  {
+    id:4,img:epsiodeimg4,text:"Day Episode Guide | The Acolyte",para:"Racing to the next target, the Jedi head to a new world as they closein on the clever assassin",esp:"S1,E4"
+},
+{
+  id:5,img:epsiodeimg5,text:"Night Episode Guide | The Acolyte",para:"In adense jungle, the Jedi are put to the test when they confront a rising darkness.",esp:"S1,E5"
+},
+{
+  id:6,img:epsiodeimg6,text:"Teach/Corrupt Episode Guide | The Acolyte",para:"On a distant island world, two strangers confront unsettling questions about identity and destiny as they each plot their next moves.",esp:"S1,E6"
+},
+{
+  id:7,img:epsiodeimg7,text:"Choice Episode Guide | The Acolyte",para:"The tragic events that forever shaped the lives of two sisters are revisited from a new perspective, and a missing truth is revealed.",esp:"S1,E7"
+},
+{
+  id:8,img:epsiodeimg8,text:"Past traget are revisited in the light of new truth, and a suprise choice leads the way to an uncretain future",esp:"S1,E8"
+},
 ]
 export const Fourcards = () => [
       {
@@ -547,6 +667,256 @@ export const Fourcards = () => [
     5: mappingimg5,
     6: mappingimg6,
   };
-  
+
+  //DataBank:Acolytes
+ export  const DataAcolytes = {
+    ALL: [
+        {id:1,name:"Brash Vow",img:DA1,},
+        { id:2,name:"Bazil",img:DA2, },
+        {id:3,name:"Brendok",img:DA3, },
+        {id:4,name:"Brendok coven",img:DA4, },
+        { id:5,name:"Brendok fortress",img:DA5, },
+        {id:6,name:"Bunta tree",img:DA6, },
+        {id:7,name:"Cabuck", img:DA7, },
+        {id:8,name:"Cantaros",img:DA8,},
+        {id:9,name:"Captain Blex",img:DA9,},
+        {id:10,name:"Carlac",img:DA10, },
+        {id:11,name:"Chancellor Drellik",img:DA11, },
+        {id:12,name:"Coruscant",img:DA12, },
+        {id:13,name:"Darth Plagueis",img:DA13, },
+        { id:14,name:"Dybuk", img:DA14,},
+        { id:15,name:"Elder Naasa",img:DA15,},
+        {id:16, name:"Exile II", img:DA16, },
+        {id:17, name:"Fallon Freighter",img:DA17, },
+        {id:18, name:"Fillik",img:DA18, },
+        {id:19, name:"Indara",img:DA19, },
+        {id:20, name:"Indara's Lightsabur",img:DA20, },
+        {id:21, name:"Jeckilon",img:DA21, },
+        {id:22, name:"Jedi binders",img:DA22, },
+        {id:23, name:"jedi order",img:DA23, },
+        {id:24, name:"Jedi outlland speeder bike",img:DA24, },
+        {id:25, name:"Jedi temple",img:DA25, },
+        {id:26, name:"Jedi Vector",img:DA26, },
+        {id:27, name:"Kelnacca",img:DA27, },
+        {id:28, name:"Kelnacca's Lightsaber",img:DA28, },
+        {id:29, name:"Kelnacca's Shelter",img:DA29, },
+        {id:30, name:"Khofar",img:DA30, },
+        {id:31, name:"Ki-Adi-Mundi",img:DA31, },
+        {id:32, name:"Lightsaber",img:DA32, },
+        {id:33, name:"Lomi Usqi Noodle shop",img:DA33, },
+        {id:34, name:"Mae Aniseya",img:DA34, },
+        {id:35, name:"Mae's Knives",img:DA35, },
+        {id:36, name:"Mog Adana",img:DA36, },
+        {id:37, name:"Mother Aniseya",img:DA37, },
+        {id:38, name:"Mother Koril",img:DA38, },
+        {id:39, name:"Olega",img:DA39, },
+        {id:40, name:"Olega Apothecary",img:DA40, },
+        {id:41, name:"Olega Jedi Temple",img:DA41, },
+        {id:42, name:"Osha Aniseya",img:DA42, },
+        {id:43, name:"Osha's Journal",img:DA43, },
+        {id:44, name:"Palwick prison ship",img:DA44, },
+        {id:45, name:"Pip",img:DA45, },
+        {id:46, name:"Poision Vial",img:DA46, },
+        {id:47, name:"Polan",img:DA47, },
+        {id:48, name:"Senator Lsedwa Chuwant",img:DA48, },
+        {id:49, name:"Senator Rayencourt",img:DA49, },
+        {id:50, name:"skura",img:DA50, },
+        {id:51, name:"Sol",img:DA51, },
+        {id:52, name:"Sol's lightsaber",img:DA52, },
+        {id:53, name:"Stun blaster",img:DA53, },
+        {id:54, name:"Tasi Lowa",img:DA54, },
+        {id:55, name:"The Stranger(aliasQimir)",img:DA55, },
+        {id:56, name:"The Stranger's cave",img:DA56, },
+        {id:57, name:"The Stranger's helmet",img:DA57, },
+        {id:58, name:"The Stranger's lightsaber",img:DA58, },
+        {id:59, name:"Torbin",img:DA59, },
+        {id:60, name:"TT-8L-OT",img:DA60, },
+        {id:61, name:"Tynnan",img:DA61, },
+        {id:62, name:"Ueda",img:DA62, },
+        {id:63, name:"umbramoth",img:DA63, },
+        {id:64, name:"Unknown world",img:DA64, },
+        {id:65, name:"Vergence",img:DA65, },
+        {id:66, name:"Vernestra Vern Rwoh",img:DA66, },
+        {id:67, name:"Vernestra Rwoh's ",img:DA67, },
+        {id:68, name:"Yoha",img:DA68, },
+        {id:69, name:"Yoha Fandar",img:DA69, },
+      
+      ],
+    CHARACTERS:[
+      { id:2,name:"Bazil",img:DA2, },
+      {id:7,name:"Cabuck", img:DA7, },
+      {id:9,name:"Captain Blex",img:DA9,},
+      {id:11,name:"Chancellor Drellik",img:DA11, },
+      {id:13,name:"Darth Plagueis",img:DA13, },
+      { id:15,name:"Elder Naasa",img:DA15,},
+      {id:18, name:"Fillik",img:DA18, },
+      {id:19, name:"Indara",img:DA19, },
+      {id:21, name:"Jeckilon",img:DA21, },
+      {id:27, name:"Kelnacca",img:DA27, },
+      {id:31, name:"Ki-Adi-Mundi",img:DA31, },
+      {id:34, name:"Mae Aniseya",img:DA34, },
+      {id:36, name:"Mog Adana",img:DA36, },
+      {id:37, name:"Mother Aniseya",img:DA37, },
+      {id:38, name:"Mother Koril",img:DA38, },
+      {id:42, name:"Osha Aniseya",img:DA42, },
+      {id:45, name:"Pip",img:DA45, },
+      {id:48, name:"Senator Lsedwa Chuwant",img:DA48, },
+      {id:49, name:"Senator Rayencourt",img:DA49, },
+      {id:51, name:"Sol",img:DA51, },
+      {id:54, name:"Tasi Lowa",img:DA54, },
+      {id:55, name:"The Stranger(aliasQimir)",img:DA55, },
+      {id:59, name:"Torbin",img:DA59, },
+      {id:67, name:"Vernestra Rwoh's ",img:DA67, },
+      {id:68, name:"Yoha",img:DA68, },
+      {id:69, name:"Yoha Fandar",img:DA69, },
+
+    ],
+    LOCATIONS:[
+      {id:3,name:"Brendok",img:DA3, },
+      { id:5,name:"Brendok fortress",img:DA5, },
+      {id:6,name:"Bunta tree",img:DA6, },
+      {id:10,name:"Carlac",img:DA10, },
+      // {id:12,name:"Coruscant",img:DA12, },
+      {id:25, name:"Jedi temple",img:DA25, },
+      {id:29, name:"Kelnacca's Shelter",img:DA29, },
+      {id:30, name:"Khofar",img:DA30, },
+      {id:33, name:"Lomi Usqi Noodle shop",img:DA33, },
+      {id:39, name:"Olega",img:DA39, },
+      {id:40, name:"Olega Apothecary",img:DA40, },
+      {id:41, name:"Olega Jedi Temple",img:DA41, },
+      {id:56, name:"The Stranger's cave",img:DA56, },
+      {id:62, name:"Ueda",img:DA62, },
+      {id:64, name:"Unknown world",img:DA64, },
+    ]
+ }
+
+ export const DatabankAcolytemenu =[
+  { id: 1, text: 'ALL', link: '/all' },
+  { id: 2, text: 'CHARACTERS', link: '/characters'},
+  { id: 3, text: 'LOCATIONS', link: '/locations' },
+
+]
+// AcolyteLastestNewsandFeature
+export const AcolyteLastestNewsandFeature=[
+  {
+    id: 1,
+    para: 'Lightsabers & Magic:Visual Effects Surpervisor Julian Foody on TheAcolyte Creatures and Weapons of the Jedi',
+    img: AcolyteLatestNews1,
+  },
+  {
+    id: 2,
+    para: 'SDCC 2024:The Stranger from The Acolyte Arrives at the Lucasflim Pavilion',
+    img: AcolyteLatestNews2,
+  },
+  {
+    id: 3,
+    para: 'An Uncommon Bond: Twins in Star Wars Stories',
+    img: AcolyteLatestNews3,
+  },
+  {
+    id: 4,
+    para: 'How The Acolyte Challenges How We See Some Members of the Jedi',
+    img: AcolyteLatestNews4,
+  },
+  {
+    id: 5,
+    para: 'The Acolyte Explained| Highlights from The Acolyte',
+    img: AcolyteLatestNews5,
+  },
+  {
+    id: 6,
+    para: 'Quiz:Which Character from The Acolyte Are You?',
+    img: AcolyteLatestNews6,
+  },
+  {
+    id: 7,
+    para: 'Fight Like a Jedi:Inside The Acolytes Stunt Sequences and Martial Arts Action',
+    img: AcolyteLatestNews7,
+  },
+  {
+    id: 8,
+    para: 'Heavy Metals:Exploring Cortosis and Beskar',
+    img: AcolyteLatestNews8,
+  },
+  {
+    id: 10,
+    para: 'the Acolyte Explained| Highlights from Episode 7 Choice',
+    img: AcolyteLatestNews9,
+  },
+]
+// This Week in stars Wars
+export const ThisWeekInStarWars=[
+  {
+    id: 1,
+    img: weekFeatureimg1 ,
+    text: "Celebrate Star Wars Day with 15 Most Impressive New Toys, Collectibles, and More",
+    link: '/#'
+  },
+  {
+    id: 2,
+    img: weekFeatureimg2 ,
+    text: "Star Wars Day 2024 Games and Experiences Deals!",
+    link: '/#'
+  },
+  {
+    id: 3,
+    img: weekFeatureimg3 ,
+    text: "Star Wars Valentine's Day Gift Guide 2024",
+    link: '/#'
+  },
+  {
+    id: 4,
+    img: weekFeatureimg4 ,
+    text: "Lucasflim and Star Wars Receive a Combined 23 Emmy Nominations",
+    link: '/#'
+  },
+  {
+    id: 5,
+    img: weekFeatureimg5 ,
+    text: "New Ahsoka Trailer: The Former Jedi Prepares for the Return of Thrawn",
+    link: '/#'
+  },
+  {
+    id: 6,
+    img: weekFeatureimg6 ,
+    text: "Ahsoka Permiere Date Revealed",
+    link: '/#'
+  },
+  // {
+  //   id: 7,
+  //   img: weekFeatureimg7 ,
+  //   text: "Celebrate Star Wars Day with 15 Most Impressive New Toys, Collectibles, and More",
+  //   link: '/#'
+  // },
+  // {
+  //   id: 8,
+  //   img: weekFeatureimg8 ,
+  //   text: "Celebrate Star Wars Day with 15 Most Impressive New Toys, Collectibles, and More",
+  //   link: '/#'
+  // },
+]
+
+// This Week in stars Wars CArds
+
+export  const WeekCard = [
+  {
+    id: 1,
+    type: 'image',
+    src: weekCardimg1,
+    text: "The High Repbulic Show"
+  },
+  {
+    id: 2,
+    type: 'image',
+    src: weekCardimg2,
+    text: "The Star Wars Show"
+  },
+  {
+    id: 3,
+    type: 'image',
+    src: weekCardimg3,
+    text: "The Star Wars Show Book Club"
+  }
+];
 
 
