@@ -14,7 +14,7 @@ import Video from './pages/Video';
 import WeekStarWar from './pages/WeekStarWar';
 import Flims from './pages/Flims';
 import Series from './pages/Series';
-import TheAcolytes from './pages/TheAcolytes';
+import TheAcolyteSeries from './pages/TheAcolyteSeries';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
       <Route path='/week-star-war' element={<WeekStarWar/>}/>
       <Route path='/flims' element={<Flims/>}/>
       <Route path='/series' element={<Series/>}/>
-      <Route path='/the-acolytes' element={<TheAcolytes/>}/>
+      <Route path='/the-acolytes-Series' element={<TheAcolyteSeries/>}/>
     </Route>
    </Routes>
    </BrowserRouter>

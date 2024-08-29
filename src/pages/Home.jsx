@@ -5,14 +5,12 @@ import Sliders from '../component/Slider/Slider'
 import Movie from '../component/Movie_Blog/Movie'
 import Card from '../component/Card/Card'
 import SoicalCard from '../component/SocialCard/SoicalCard'
-import NewFeature from '../component/NewFeature/NewFeature'
 import LastNew from '../component/LastNew/LastNew'
-import { ExploreMoreDetail, CardDetail } from '../Api/Data';
+import { ExploreMoreDetail, CardDetail,AcolyteLastestNewsandFeature,Movie_Comp } from '../Api/Data';
 import CardSlider from '../component/CardSlider/CardSlider';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 // import StarMovie from '../component/Star-Movies/StarMovie'
 import { Link } from 'react-router-dom'
-import { Movie_Comp } from '../Api/Data';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -46,7 +44,7 @@ const Home = () => {
         <hr className='color-white' />
         </div>
       </div>
-      <NewFeature/>
+      <CardSlider CardDetail={AcolyteLastestNewsandFeature}/>
       <div>
         <div className="news_header">
           <h1 className='color-white'>Latest Video</h1>

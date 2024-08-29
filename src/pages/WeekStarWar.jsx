@@ -2,7 +2,7 @@ import React from 'react'
 import BannerWeek from '../component/BannerWeek/BannerWeek'
 import LastNewsFeature from '../component/reuseable_card/LargeTwoCard/LastNewsFeature'
 import LastNew from '../component/LastNew/LastNew'
-import { NewsDetail ,ThisWeekInStarWars} from '../Api/Data'
+import {ThisWeekInStarWars} from '../Api/Data'
 import CardSlider from '../component/CardSlider/CardSlider'
 import img11 from "../assests/silder/thr-quiz-sw2-hero-desktop_25adae14.jpeg";
 import Video from "../assests/video_img/main (1).mp4";

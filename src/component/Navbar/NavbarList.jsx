@@ -33,35 +33,35 @@ export const NavLinks = [
     link:'/Series',
     items: [
       { label: 'ALL SERIES', link: '/Series' },
-      { label: 'THE ACOLYTE', link: '/the-acolytes' },
+      { label: 'THE ACOLYTE', link: '/the-acolytes-Series' },
       { label: 'THE BAD BATCH', link: '/the-bad-batch' },
-      { label: 'AHSOKA', link: '/the-high-republic' },
-      { label: 'ANDOOR', link: '/quizzes-polls' },
-      { label: 'THE MANDALORIAN', link: '/books-comics' },
+      { label: 'AHSOKA', link: '/the-ahsoka-series' },
+      { label: 'ANDOOR', link: '/the-andoor-series' },
+      { label: 'THE MANDALORIAN', link: '/the-mandalorian-series' },
     ],
   },
   {
     title: 'GAMES + INTERACTIVE',
     items: [
       { label: 'VIEW ALL', link: '/TheLastest' },
-      { label: 'STAR WORLD OUTLAWS', link: '/the-acolyte' },
-      { label: 'GAMES + APPS', link: '/the-bad-batch' },
-      { label: 'VR + IMMERSIVE', link: '/the-high-republic' },
+      { label: 'STAR WORLD OUTLAWS', link: '/star-world-outlaws' },
+      { label: 'GAMES + APPS', link: '/game-apps' },
+      { label: 'VR + IMMERSIVE', link: '/vr-immersive' },
     ]
   },
   {
     title: 'DATABANK',
     items: [
-      { label: 'ALL DATABANK', link: '/TheLastest' },
-      { label: 'ERAS', link: '/the-acolyte' },
+      { label: 'ALL DATABANK', link: '/all-databank' },
+      { label: 'ERAS', link: '/eras' },
     ]
   },
   {
     title: 'DISNEY+',
     items: [
-      { label: 'STRAM NOW', link: '/TheLastest' },
-      { label: 'EXPLORE', link: '/the-acolyte' },
-      { label: 'THE DISNEY BUNDLE', link: '/the-bad-batch' },
+      { label: 'STREAM NOW', link: '/stream-now' },
+      { label: 'EXPLORE', link: '/explore' },
+      { label: 'THE DISNEY BUNDLE', link: '/the-disney-bundle' },
     ]
   },
   

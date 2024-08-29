@@ -4,9 +4,9 @@ import SoicalCard from '../component/SocialCard/SoicalCard';
 import LastNew from '../component/LastNew/LastNew';
 import { episode,DatabankAcolytemenu,DataAcolytes,video,Movie_Comp,AcolyteLastestNewsandFeature   } from '../Api/Data'
 import CardSlider from '../component/CardSlider/CardSlider';
-import Databank from '../component/TheAcolytes/Databank';
+import Databank from '../component/TheAcolytesDatabank/Databank';
 
-const TheAcolytes = () => {
+const TheAcolyteSeries = () => {
   return (
     <div>
       <Movie Movie_Comp={Movie_Comp}/>
@@ -61,4 +61,4 @@ const TheAcolytes = () => {
   )
 }
 
-export default TheAcolytes
+export default TheAcolyteSeries
