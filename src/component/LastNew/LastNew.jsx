@@ -19,7 +19,6 @@ const LastNew = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [currentSource, setCurrentSource] = useState(null);
   const videoRef = useRef(null);
-  const [project, setProject] = useState(LastNewsDetail[0]);
 
   useEffect(() => {
     if (status === 'idle') {
@@ -43,84 +42,65 @@ const LastNew = () => {
     setCurrentSource(null);
   };
 
-
-
- 
   const handleSlideChange = (swiper) => {
-    const currentSlide = swiper.activeIndex;
-    setProject(LastNewsDetail[currentSlide]);
-    // setTimeout(() => {
-    //   const cards = document.querySelectorAll('.LastNew_card');
-    //   let maxHeight = 0;
-
-    //   cards.forEach(card => {
-    //     card.style.height = 'auto';
-    //     const height = card.offsetHeight;
-    //     if (height > maxHeight) {
-    //       maxHeight = height;
-    //     }
-    //   });
-
-    //   cards.forEach(card => {
-    //     card.style.height = `${maxHeight}px`;
-    //   });
-    // }, 0); // Recalculate height after slide change
+    // You can use swiper.activeIndex if needed
+    // e.g., to log the current slide index or fetch additional data
+    // console.log('Slide changed to:', swiper.activeIndex);
   };
 
   return (
     <div>
       <div className='LastNew-all' id='LastNew-all'>
-      <Swiper
-        slidesPerView={3} // Default to 3 slides per view
-        spaceBetween={30}
-        handleSlideChange={handleSlideChange}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          375: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          425: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-      >
-          {LastNewsDetail.map((item,index) => 
-            { return <SwiperSlide key={index}>
-              <div  className='LastNew_card'>
-              <div className='LastNew_card_img'>
-                <img src={item.videoImg} alt={item.text} onClick={() => openModal(item.videoSrc)} style={{ cursor: 'pointer' }} />
+        <Swiper
+          slidesPerView={3} // Default to 3 slides per view
+          spaceBetween={30}
+          onSlideChange={handleSlideChange} // Update this line to use the correct Swiper prop
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+        >
+          {LastNewsDetail.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className='LastNew_card'>
+                <div className='LastNew_card_img'>
+                  <img src={item.videoImg} alt={item.text} onClick={() => openModal(item.videoSrc)} style={{ cursor: 'pointer' }} />
+                </div>
+                <div className="playbutton">
+                  <CiPlay1 className='play-icon' onClick={() => openModal(item.videoSrc)} style={{ cursor: 'pointer' }} />
+                </div>
+                <div className='LastNew_card_text text_line'>
+                  {item.link ? <a href={item.link}><hr /></a> : null}
+                  <p className='color-white'>{item.text}</p>
+                  <p className='color-white'>{item.para}</p>
+                </div>
+                <p className='time color-white'>{item.time}</p>
               </div>
-              <div className="playbutton">
-                <CiPlay1 className='play-icon'  onClick={() => openModal(item.videoSrc)} style={{ cursor: 'pointer' }}/>
-              </div>
-              <div className='LastNew_card_text text_line'>
-                {item.link ? <a href={item.link}><hr /></a> : null}
-                <p className='color-white'>{item.text}</p>
-                <p className='color-white'>{item.para}</p>
-              </div>
-              <p className='time color-white'>{item.time}</p>
-            </div>
-            </SwiperSlide>}
-            
-          )}
-          <CardBtnslider/>
+            </SwiperSlide>
+          ))}
+          <CardBtnslider />
         </Swiper>
 
         {selectedVideo && (

@@ -1,17 +1,11 @@
-import React, { useEffect,useState} from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "./Silder.css";
 import { Sliderdata } from '../../Api/Data';
 import SlidersBtn from './SlidersBtn';
 
-
 const Sliders = () => {
-    const [project ,setProject] = useState(Sliderdata[0]);
-  const handleSlideChange = (Swiper) => {
-          const currentSlide = Swiper.activeIndex;
-          setProject(Sliderdata[currentSlide]);}
-   
     useEffect(() => {
         const setEqualHeight = () => {
             const cards = document.querySelectorAll('.slide');
@@ -38,43 +32,41 @@ const Sliders = () => {
         };
     }, []);
 
- 
     return (
         <div className='slide_all tablet-view' id='slide_all'>
             <Swiper spaceBetween={30}
             slidesPerView={1}
-            onSlideChange={handleSlideChange}
             className='swiper-all-slide'
             >
-                {Sliderdata.map(( project,index ) => {
-                    return<SwiperSlide  key={index} className={`slide ${!project.logo ? 'no-logo' : ''} ${index === 0 ? 'first-slide' : ''}`} id='slide'>
+                {Sliderdata.map((project, index) => {
+                    return (
+                        <SwiperSlide key={index} className={`slide ${!project.logo ? 'no-logo' : ''} ${index === 0 ? 'first-slide' : ''}`} id='slide'>
                             <div className='slide_img'>
-                            <img src={project.img} alt='Social_card img' className={`desktop-img ${index === 0 ? 'first-slide-img' : ''}`} />
-                            {index === 0 && <img src={project.mobileImg} alt='Mobile img' className='mobile-img' />}
-                        </div>
-                        <div className='overlay'>
-                            {project.logo && (<div className='logo-image'><img src={project.logo} alt="logo_image" width={450} height={200} /></div>)}
-                            <div className='para_mobile'>
-                            <p className='image_text'>{project.text}</p>
-                            <p className='image_para'>{project.para}</p>
+                                <img src={project.img} alt='Social_card img' className={`desktop-img ${index === 0 ? 'first-slide-img' : ''}`} />
+                                {index === 0 && <img src={project.mobileImg} alt='Mobile img' className='mobile-img' />}
                             </div>
-                           
-                            <div className='slide-button'>
-                                <button className='btn-bg-color'>{project.ButtonText}</button>
-                                {(index === 0 || index === Sliderdata.length - 1) && <button className='btn-bg-black-color'>{project.ButtonTextOther}</button>}
+                            <div className='overlay'>
+                                {project.logo && (<div className='logo-image'><img src={project.logo} alt="logo_image" width={450} height={200} /></div>)}
+                                <div className='para_mobile'>
+                                    <p className='image_text'>{project.text}</p>
+                                    <p className='image_para'>{project.para}</p>
+                                </div>
+                                <div className='slide-button'>
+                                    <button className='btn-bg-color'>{project.ButtonText}</button>
+                                    {(index === 0 || index === Sliderdata.length - 1) && <button className='btn-bg-black-color'>{project.ButtonTextOther}</button>}
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-               
+                        </SwiperSlide>
+                    );
                 })}
                 <SlidersBtn className="slide-btn"/>
             </Swiper>
-       
-    </div>
+        </div>
     );
 };
 
 export default Sliders;
+
 
  //     <div key={index} className={`slide ${!project.logo ? 'no-logo' : ''} ${index === 0 ? 'first-slide' : ''}`} id='slide'>
                     //     <div className='slide_img'>
