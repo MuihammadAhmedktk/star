@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useCallback } from 'react';
 import SideMenuList from './SideMenuList';
 import VideoAll from './VideoAll';
 
@@ -6,16 +6,16 @@ const BrowserVideo = ({ videos, BrowseMenuList }) => {
   const [selectedMenu, setSelectedMenu] = useState('ALL');
   const [menuList, setMenuList] = useState(BrowseMenuList);
 
-  const calculateMenuCounts = () => {
+  const calculateMenuCounts = useCallback(() => {
     return BrowseMenuList.map(menuItem => {
       const count = videos[menuItem.text]?.length || 0;
       return { ...menuItem, count };
     });
-};
+  }, [BrowseMenuList, videos]);
 
-useEffect(() => {
+  useEffect(() => {
     setMenuList(calculateMenuCounts());
-}, []);
+  }, [calculateMenuCounts]);
 
   return (
     <div className='BrowserVideos'>

@@ -1,11 +1,10 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect } from 'react';
 import './CardSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import CardBtnslider from '../CardBtnslider';
 
-const CardSlider = ({CardDetail}) => {
-    const [project, setProject] = useState(CardDetail[0]);
+const CardSlider = ({ CardDetail }) => {
 
   useEffect(() => {
     const setEqualHeight = () => {
@@ -32,9 +31,8 @@ const CardSlider = ({CardDetail}) => {
       window.removeEventListener('resize', setEqualHeight);
     };
   }, [CardDetail]);
+
   const handleSlideChange = (swiper) => {
-    const currentSlide = swiper.activeIndex;
-    setProject(CardDetail[currentSlide]);
     setTimeout(() => {
       const cards = document.querySelectorAll('.Movie_card');
       let maxHeight = 0;
@@ -52,58 +50,59 @@ const CardSlider = ({CardDetail}) => {
       });
     }, 0); // Recalculate height after slide change
   };
+
   return (
     <div className='Movie_card-all'>
-    <Swiper
-      slidesPerView={3} // Default to 3 slides per view
-      spaceBetween={30}
-      onSlideChange={handleSlideChange}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        375: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        425: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      }}
-    >
-      {CardDetail.map((item, index) => {
-        return <SwiperSlide key={index}>
-        <div className='Movie_card'>
-          <div className='Movie_card_img'>
-            <img src={item.img} alt='Movie_card img' />
-          </div>
-          <div className='Movie_card_text'>
-            <a href={item.link}><hr /></a>
-            <p>{item.text}</p>
-            <p className='para'>{item.para}</p>
-          </div>
-          {item.esp && <p className='guide-esp color-white'>{item.esp}</p>}
-        </div>
-      </SwiperSlide>
-      })}
-      <CardBtnslider className="slide-btn" />
-    </Swiper>
-  </div>
-  )
-}
+      <Swiper
+        slidesPerView={3} // Default to 3 slides per view
+        spaceBetween={30}
+        onSlideChange={handleSlideChange}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          425: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
+      >
+        {CardDetail.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className='Movie_card'>
+              <div className='Movie_card_img'>
+                <img src={item.img} alt='Movie_card img' />
+              </div>
+              <div className='Movie_card_text'>
+                <a href={item.link}><hr /></a>
+                <p>{item.text}</p>
+                <p className='para'>{item.para}</p>
+              </div>
+              {item.esp && <p className='guide-esp color-white'>{item.esp}</p>}
+            </div>
+          </SwiperSlide>
+        ))}
+        <CardBtnslider className="slide-btn" />
+      </Swiper>
+    </div>
+  );
+};
 
-export default CardSlider
+export default CardSlider;
