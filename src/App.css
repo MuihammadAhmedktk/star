@@ -12,8 +12,7 @@
   background-color: #4D0608;
 }
 .line-adjust hr{
-  width: 97%; 
- margin-left: 1rem;
+  width: 100%; 
  margin-bottom: 1rem;
 }
 .pad-r-l-all{
@@ -181,9 +180,10 @@ a{
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
   align-items: center;
+}
+.LastNew-all{
+  padding-bottom: 20px;
 }
 /* loader container */
 .loader-container{

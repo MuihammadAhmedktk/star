@@ -1,6 +1,6 @@
 .Movie_card-all {
     padding-bottom: 20px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 .Movie_card {
     border-radius: 12px;
@@ -79,12 +79,4 @@
     .Movie_card_img{
         height: 266px;
     }
-}
-@media (max-width:430px){
-  .Movie_card-all{
-    padding-left:0.5rem ;
-    padding-right: 0.5rem;
-  }
-  
-  
 }
