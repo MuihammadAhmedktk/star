@@ -42,6 +42,7 @@ export const NavLinks = [
   },
   {
     title: 'GAMES + INTERACTIVE',
+    link:'/games-interactive',
     items: [
       { label: 'VIEW ALL', link: '/TheLastest' },
       { label: 'STAR WORLD OUTLAWS', link: '/star-world-outlaws' },
@@ -51,6 +52,7 @@ export const NavLinks = [
   },
   {
     title: 'DATABANK',
+    link:'/databank',
     items: [
       { label: 'ALL DATABANK', link: '/all-databank' },
       { label: 'ERAS', link: '/eras' },
@@ -58,6 +60,7 @@ export const NavLinks = [
   },
   {
     title: 'DISNEY+',
+    link:'/disney',
     items: [
       { label: 'STREAM NOW', link: '/stream-now' },
       { label: 'EXPLORE', link: '/explore' },
