@@ -11,6 +11,17 @@
 .three-card-bg-color{
   background-color: #4D0608;
 }
+/* Inputs-Dropdrown-container */
+.Inputs-Dropdrown-container{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* heading-Category */
+.heading-Category{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .line-adjust hr{
   width: 100%; 
  margin-bottom: 1rem;
@@ -179,7 +190,7 @@ a{
 .news_header{
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding-top: 2rem;
   align-items: center;
 }
 .LastNew-all{

@@ -1,16 +1,7 @@
 import React,{useState} from 'react'
 import './Fearure_card_re.css'
 
-
-const textSlice = (text, maxLength) => {
-  if (text.length <= maxLength) return { truncated: text, fullText: text };
-
-  const truncated = text.slice(0, maxLength) + '...';
-  return { truncated, fullText: text };
-};
-
 const FeatureCardRe = ({CardDetail}) => {
-const [expandedCard, setExpandedCard] =useState({});
 const[visableCount,setVisableCount] = useState(8);
 const showMore = ()=>{
     setVisableCount(prevCount=> prevCount + 4)
@@ -18,36 +9,20 @@ const showMore = ()=>{
 const removeMore =()=>{
     setVisableCount(8)
 }
-const toggleExpand =(id)=>{
-    setExpandedCard(prevState =>({
-            ...prevState,
-            [id]:!prevState[id],
-    }));
-};
-
   return (
     <div>
-           <div className='morenews'>
+     <div className='morenews'>
     {
         CardDetail.slice(0,visableCount).map((item,index)=>
         {
-            const { truncated, fullText } =textSlice (item.text, 20);
-            const isExpanded = expandedCard[item.id];
+         
             return(
                 <div className="news_card" key={index}>
                 <div className="news_card_img">
                     <img src={item.Img} alt="" />
                 </div>
                 <div className="news_card_text">
-                <p>
-              {isExpanded ? fullText : truncated}
-              <p
-                style={{ color: '#fff', cursor: 'pointer', fontSize:'1rem', textDecoration:'underline'}}
-                onClick={() => toggleExpand(item.id)}
-              >
-               {isExpanded ? ' Read Less' : 'Read More'}
-              </p>
-            </p>
+                <p>{item.text} </p>
                     <p>{item.date}</p>
                 </div>
             </div>
@@ -56,7 +31,7 @@ const toggleExpand =(id)=>{
    <div className='btn-adjust'>
    {visableCount < CardDetail.length ?((
     <button onClick={showMore}>ShowMore</button>
-   )):(<button onClick={removeMore}>RemoveMore</button>)}
+   )):(<button onClick={removeMore}>ShowLess</button>)}
    </div>
     </div>
   )

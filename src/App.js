@@ -15,6 +15,8 @@ import WeekStarWar from './pages/WeekStarWar';
 import Flims from './pages/Flims';
 import Series from './pages/Series';
 import TheAcolyteSeries from './pages/TheAcolyteSeries';
+import SkeletonCrew from './pages/SkeletonCrew';
+import StarWarsOutline from './pages/StarWarsOutline';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
       <Route path='/flims' element={<Flims/>}/>
       <Route path='/series' element={<Series/>}/>
       <Route path='/the-acolytes-Series' element={<TheAcolyteSeries/>}/>
+      <Route path='/Skeleton-crew' element={<SkeletonCrew/>}/>
+      <Route path='/Star-Wars-Outline' element={<StarWarsOutline/>}/>
     </Route>
    </Routes>
    </BrowserRouter>

@@ -8,8 +8,8 @@ export const NavLinks = [
 
     items: [
       { label: 'THE LATEST', link: '/TheLastest' },
-      { label: 'THE ACOLYTE', link: '/the-acolyte' },
-      { label: 'THE BAD BATCH', link: '/the-bad-batch' },
+      { label: 'SkELETON CREW', link: '/Skeleton-crew' },
+      { label: 'STAR WARS OUTLINE', link: '/Star-Wars-Outline' },
       { label: 'THE HIGH REPUBLIC', link: '/the-high-republic' },
       { label: 'QUIZZES + POLLS', link: '/quizzes-polls' },
       { label: 'BOOKS + COMICS', link: '/books-comics' },

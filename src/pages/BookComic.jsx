@@ -5,10 +5,10 @@ import {featurecard} from '../Api/Data'
 const BookComic = () => {
   return (
     <div className='pad-r-l-all'>
-    <div style={{paddingBottom:"24px",paddingTop:"24px"}}>
+    <div className='Inputs-Dropdrown-container'>
 <InputsDropdown/>
 </div>
-<div className='heading' style={{paddingTop:"30px",paddingBottom:"30px"}}>
+<div className='heading-Category'>
   <h2 className='color-white'>Category: Book + Comic</h2>
 </div>
 <FeatureCardRe CardDetail={featurecard}/>

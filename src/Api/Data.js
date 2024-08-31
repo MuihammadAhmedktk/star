@@ -176,6 +176,22 @@ import weekCardimg1 from '../assests/weekstar/Card/thrs-singlehero-landing-mobil
 import weekCardimg2 from '../assests/weekstar/Card/sws-thumb-21_c8bb8295.jpeg'
 import weekCardimg3 from '../assests/weekstar/Card/book-club-exlink_01e569ab.jpeg'
 
+// Skeleton Crew
+import SkeletonCrewImg1 from '../assests/skeletoncrew/d23-roundup-collage-featured-v6_f58046c8.jpeg'
+import SkeletonCrewImg2 from '../assests/skeletoncrew/skeleton-crew-teaster-poster-article-feature_1789c6b2.jpeg'
+
+// Star wars Outline
+import StarWarsOutlineImg1 from '../assests/starwaroutline/star-wars-outlaws-key-art-horiz_512007c3.jpeg'
+import StarWarsOutlineImg2 from '../assests/starwaroutline/star-wars-outlaws-for-beginners-_article-feature_985e1aa5.jpeg'
+import StarWarsOutlineImg3 from '../assests/starwaroutline/star-wars-outlaws-gamescom-trailer_article-feature_fffb66b5.jpeg'
+import StarWarsOutlineImg4 from '../assests/starwaroutline/star-wars-outlaws-gameplay_article-feature_01bb1e67.jpeg'
+import StarWarsOutlineImg5 from '../assests/starwaroutline/star-wars-outlaws-story-trailer-interview-article-featu_336a22a4.jpeg'
+import StarWarsOutlineImg6 from '../assests/starwaroutline/best-of-sw-23-featured_2dec512d.jpeg'
+import StarWarsOutlineImg7 from '../assests/starwaroutline/sw-outlaws-developer-diary-article-feature_c4e674e0.jpeg'
+import StarWarsOutlineImg8 from '../assests/starwaroutline/sw-outlaws-sdcc-2023-sw2-hero-feature_7524cd5f.jpeg'
+
+
+
 // lastNewsDetail
 export const getImages = () => {
   return [
@@ -235,7 +251,6 @@ export const videos = {
     ],
     // Add other menu item videos here...
   };
-
 
   export const Sliderdata= [
     {
@@ -407,7 +422,7 @@ export const featurecard  =[
   {
       id:1,
       Img:featurecardImg1,
-      text:"YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil PlanterYOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter YOu'll Dig This DIY Bazil Basil Planter",
+      text:"YOu'll Dig This DIY Bazil Basil Planter ",
       date: '24,July 2021',
   },
   {
@@ -498,68 +513,6 @@ export const featurecard  =[
       text:"YOu'll Dig This DIY Bazil Basil Planter",
       date: moment().format('MMMM DD,YYYY'),
   },
-  
-  {
-      id:15,
-      Img:featurecardImg1,
-      text:"YOu'll Dig This DIY Bazil Basil Planter",
-      date: moment().format('MMMM DD,YYYY'),
-  },
-  {
-      id:16,
-      Img:featurecardImg2,
-      text:"YOu'll Dig This DIY Bazil Basil Planter",
-      date: moment().format('MMMM DD,YYYY'),
-  },
-  {
-      id:17,
-      Img:featurecardImg3,
-      text:"YOu'll Dig This DIY Bazil Basil Planter",
-      date: moment().format('MMMM DD,YYYY'),
-  },
-  
-  {
-      id:18,
-      Img:featurecardImg1,
-      text:"YOu'll Dig This DIY Bazil Basil Planter",
-      date: moment().format('MMMM DD,YYYY'),
-  },
-  {
-      id:19,
-      Img:featurecardImg2,
-      text:"YOu'll Dig This DIY Bazil Basil Planter",
-      date: moment().format('MMMM DD,YYYY'),
-  },
-  {
-      id:20,
-      Img:featurecardImg3,
-      text:"YOu'll Dig This DIY Bazil Basil Planter",
-      date: moment().format('MMMM DD,YYYY'),
-  },
-  {
-    id:21,
-    Img:featurecardImg3,
-    text:"YOu'll Dig This DIY Bazil Basil Planter",
-    date: moment().format('MMMM DD,YYYY'),
-},
-{
-  id:22,
-  Img:featurecardImg3,
-  text:"YOu'll Dig This DIY Bazil Basil Planter",
-  date: moment().format('MMMM DD,YYYY'),
-},
-{
-  id:23,
-  Img:featurecardImg3,
-  text:"YOu'll Dig This DIY Bazil Basil Planter",
-  date: moment().format('MMMM DD,YYYY'),
-},
-{
-  id:24,
-  Img:featurecardImg3,
-  text:"YOu'll Dig This DIY Bazil Basil Planter",
-  date: moment().format('MMMM DD,YYYY'),
-},
  ]
 
  export const video =[  {
@@ -917,4 +870,71 @@ export  const WeekCard = [
   }
 ];
 
+// Skeleton Crew
+export const skeletonCrew = [
+  {
+    id:1,
+    Img:SkeletonCrewImg1,
+    text:"D23 2024:All the star Wars News from D23:The Ultimate Disney Fan Event",
+    date:'August 12, 2024',
+},
+{
+  id:2,
+  Img:SkeletonCrewImg2,
+  text:"Skeleton Crew Offical Trailer and Key Art Revealed",
+  date:'August 10, 2024',
+},
+]
+// Star wars Outline
+export const starwarsoutline = [
+  {
+    id:1,
+    Img:StarWarsOutlineImg1,
+    text:"Star Wars Outlaws is here!",
+    date:'August 30, 2024',
+},
+{
+  id:2,
+  Img:StarWarsOutlineImg2,
+  text:"Embrance Your Sneaky Side in Star Wars Outlaws",
+  date:'August 18, 2024',
+},
+{
+  id:3,
+  Img:StarWarsOutlineImg3,
+  text:"New Star Wars Outlaws Trailer Takes Us Back to 2024",
+  date:'August 22, 2024',
+},
+{
+  id:4,
+  Img:StarWarsOutlineImg4,
+  text:"Star Wars Outlaws Julian Gerighty Talks...",
+  date:'August 18, 2024',
+},
+{
+  id:5,
+  Img:StarWarsOutlineImg5,
+  text:"Star Wars Outlaws:Creative Dtrector Julian Gerighty",
+  date:'August 18, 2024',
+},
+{
+  id:6,
+  Img:StarWarsOutlineImg6,
+  text:"Star Wars:Best of 2023",
+  date:'August 18, 2024',
+},
+{
+  id:7,
+  Img:StarWarsOutlineImg7,
+  text:"SDCC 2023:Takes a Peek Behind the",
+  date:'August 18, 2024',
+},
+{
+  id:8,
+  Img:StarWarsOutlineImg8,
+  text:"SDCC 2023:Step Into the World of Star Wars..",
+  date:'August 18, 2024',
+},
+
+]
 

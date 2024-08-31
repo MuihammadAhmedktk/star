@@ -6,8 +6,8 @@
 }
 
 .news_card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows:repeat(2, 1fr);
     background-color: #333;
     border-radius: 8px;
     overflow: hidden;
@@ -16,11 +16,13 @@
 
 .news_card_img {
     width: 100%;
+    height: 100%;
 }
 
 .news_card_img img {
     width: 100%;
-    height: auto; 
+    height: 100%; 
+    object-fit: cover;
 }
 
 .news_card_text {
@@ -33,18 +35,18 @@
     color: #fff;
 }
 .news_card_text p:first-child{
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
 }
 .news_card_text p:last-child{
-    font-size: 12px;
+    font-size: .8rem;
     font-weight: 400;
 }
 .btn-adjust{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 @media (min-width: 768px) and (max-width: 1024px){
     .morenews{

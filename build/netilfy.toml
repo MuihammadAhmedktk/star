@@ -1,8 +1,0 @@
-[build]
-publish = "build" # Adjust this if your build directory is named differently
-
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
