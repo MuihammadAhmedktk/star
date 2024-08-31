@@ -6,11 +6,11 @@ import { skeletonCrew, } from '../Api/Data';
 const SkeletonCrew = () => {
   return (
     <div className='pad-r-l-all'>
+      <div className='Inputs-Dropdrown-container'>
+    <InputsDropdown/>
+    </div>
     <div className='heading-Category'>
       <h2 className='color-white'>Category:Skeleton Crew</h2>
-    </div>
-    <div className='Inputs-Dropdrown-container'>
-    <InputsDropdown/>
     </div>
     <FeatureCardRe CardDetail={skeletonCrew}/>
   </div>

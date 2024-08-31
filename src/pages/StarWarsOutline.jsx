@@ -6,11 +6,11 @@ import { starwarsoutline } from '../Api/Data';
 const StarWarsOutline = () => {
   return (
     <div className='pad-r-l-all'>
+      <div className='Inputs-Dropdrown-container'>
+    <InputsDropdown/>
+    </div>
     <div className='heading-Category'>
       <h2 className='color-white'>Category:Star Wars Outline</h2>
-    </div>
-    <div className='Inputs-Dropdrown-container'>
-    <InputsDropdown/>
     </div>
     <FeatureCardRe CardDetail={starwarsoutline}/>
   </div>
