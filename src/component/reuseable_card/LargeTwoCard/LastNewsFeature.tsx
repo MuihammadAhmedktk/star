@@ -1,0 +1,80 @@
+import React from 'react';
+import './LastNewsFeature.css';
+import img0 from "../../../assets/featureCard/the-acolyte-highlights-teach-corrupt_article-feature_23fa6b1a.jpeg";
+import video1 from "../../../assets/video_img/main (1).mp4";
+import { WeekCard } from '../../../Api/Data';
+
+interface CardProps {
+  showVideo: boolean;
+}
+
+interface SingleCard {
+  id: number;
+  type: string;
+  src: string;
+  text: string;
+}
+
+interface WeekCardItem {
+  id: number;
+  type: string;
+  src: string;
+  text: string;
+}
+
+const LastNewsFeature: React.FC<CardProps> = ({ showVideo }) => {
+  const Single: SingleCard[] = [
+    {
+      id: 1,
+      type: showVideo ? 'video' : 'image',
+      src: showVideo ? video1 : img0,
+      text: "The Acolyte Explained | Highlights from Teach/ Corrupt"
+    }
+  ];
+
+  return (
+    <div>
+      <div className='feature-card'>
+        {Single.map(({ id, type, src, text }) => (
+          <div key={id} className='feature-card-first'>
+            <div className="media-card color-white">
+              {type === 'video' ? (
+                <video controls className="media-element">
+                  <source src={src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <img src={src} alt="" className="media-element" />
+              )}
+            </div>
+            <div className="text-card color-white">
+              <p>{text}</p>
+            </div>
+          </div>
+        ))}
+
+        <div className='feature-card-second'>
+          {WeekCard.map(({ id, type, src, text }: WeekCardItem) => (
+            <div key={id} className='cards'>
+              <div className="media-card">
+                {type === 'image' ? (
+                  <img src={src} alt="" className="media-element" />
+                ) : (
+                  <video controls className="media-element">
+                    <source src={src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
+              <div className="text-card color-white">
+                <p>{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default LastNewsFeature;

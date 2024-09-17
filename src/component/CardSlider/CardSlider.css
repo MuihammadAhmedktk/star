@@ -1,6 +1,19 @@
 .Movie_card-all {
     padding-bottom: 20px;
     /* padding-top: 20px; */
+    position: relative;
+}
+.btnSlider{
+    position: absolute;
+    z-index:1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
 }
 .Movie_card {
     border-radius: 12px;

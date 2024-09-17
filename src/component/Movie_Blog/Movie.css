@@ -3,6 +3,8 @@
 }
 .movie_blog{
    position: relative;
+   width: 100%;
+   height: 100%;
 }
 .movie_blog img{
     width: 100%;
@@ -17,7 +19,7 @@
     align-items: center;
     position: absolute;
     flex-direction: column;
-    top:2rem;
+    top:4rem;
     left: 49rem;
     width: 500px;
 }
